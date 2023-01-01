@@ -589,7 +589,10 @@ a {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 120px;
-    align-items: center;
+    align-items: start;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
 }
 
 .service-column {
@@ -677,23 +680,22 @@ a {
     .services-grid {
         grid-template-columns: 1fr;
         gap: 60px;
+        max-width: 700px;
+        text-align: center;
+        justify-items: center;
+    }
+    .service-card {
+        width: 90%;
     }
 
     .image-column {
+        order: -1; /* Show image above services */
         width: 100%;
-        order: -1;
-        /* show image on top for better flow */
     }
 
     .center-image {
         max-width: 100%;
         height: auto;
-    }
-
-    .service-card {
-        width: 80%;
-        height: auto;
-        margin: 0 auto;
     }
 
     .service-column {
@@ -706,6 +708,12 @@ a {
 }
 
 @media (max-width: 600px) {
+    .services-grid {
+        gap: 40px;
+        padding: 0 10px;
+        max-width: 100%;
+    }
+
     .servicecontainer {
         padding: 40px 20px;
     }
@@ -775,7 +783,7 @@ a {
 
 .cards-scroll-container {
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .cards {
@@ -793,7 +801,57 @@ a {
         transform: translateX(-50%);
     }
 }
+.cards-carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* .cards-scroll-container {
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch; 
+} */
 
+.cards-scroll-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+}
+
+#cardCarousel {
+    /* display: inline-flex; */
+    gap: 20px; 
+    display: flex;
+    transition: transform 0.5s ease;
+    will-change: transform;
+    /* Adjust as needed */
+}
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    border: none;
+    font-size: 30px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.carousel-button.left {
+    left: 10px;
+}
+
+.carousel-button.right {
+    right: 10px;
+}
 .card {
     flex: 0 0 auto;
     width: 350px;
@@ -929,9 +987,94 @@ a {
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
-
+@media (max-width:480px) {
+    .card-icon {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 20px;
+    }
+    
+    .card h3 {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+    
+    .card-back p {
+        font-size: 12px;
+        margin-bottom: 20px;
+        color: #021526;
+    }
+    
+    .choose-learn-more {
+        padding: 5px 10px;
+        border: 1px solid #021526;
+        border-radius: 5px;
+        color: #021526;
+        text-decoration: none;
+        transition: all 0.3s;
+        font-size: 10px;
+    }
+    
+    .choose-learn-more:hover {
+        background: #e2e2b6;
+        color: #021526;
+        border: 2px solid #e2e2b6;
+    }
+    .carousel-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
+        background-color: rgba(0, 0, 0, 0.3);
+        color: white;
+        border: none;
+        font-size: 15px;
+        padding: 10px 15px;
+        cursor: pointer;
+        border-radius: 50%;
+        transition: background-color 0.3s ease;
+    }
+    
+    .carousel-button:hover {
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+    
+    .carousel-button.left {
+        left: 0px;
+    }
+    
+    .carousel-button.right {
+        right: 0px;
+    }
+}
 /* Responsive Adjustments */
 @media (max-width: 768px) {
+    .carousel-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
+        background-color: rgba(0, 0, 0, 0.3);
+        color: white;
+        border: none;
+        font-size: 15px;
+        padding: 10px 15px;
+        cursor: pointer;
+        border-radius: 50%;
+        transition: background-color 0.3s ease;
+    }
+    
+    .carousel-button:hover {
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+    
+    .carousel-button.left {
+        left: 5px;
+    }
+    
+    .carousel-button.right {
+        right: 10px;
+    }
     .whychooseuscontainer {
         padding: 40px 20px;
     }

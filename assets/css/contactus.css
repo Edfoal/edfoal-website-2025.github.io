@@ -16,6 +16,9 @@
     grid-template-rows: 1fr;
     padding: 3.75rem 2.5rem;
     text-align: center;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 3.125rem 3.125rem;
 }
 .contactus-banner-grid-overlay {
     grid-column: 1 / -1;
@@ -25,10 +28,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.1) 0.0625rem, transparent 0.0625rem),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0.0625rem, transparent 0.0625rem);
-    background-size: 3.125rem 3.125rem;
-    opacity: 0.2;
+    
+    /* opacity: 0.2; */
 }
 .contactus-banner-content {
     text-align: center;
@@ -54,6 +55,12 @@
     line-height: 1.5;
 }
 @media (max-width: 1024px) {
+    .contactus-banner-body {
+        /* padding: 3.125rem 1.5rem; */
+        background-image: linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+        
+    }
     .contactus-banner-main-heading {
         font-size: 2.625rem;
     }
@@ -70,7 +77,9 @@
 /* Mobile (Small screens) */
 @media (max-width: 768px) {
     .contactus-banner-body {
-        padding: 3.125rem 1.5rem;
+        /* padding: 3.125rem 1.5rem; */
+        background-image: linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
     }
 
     .contactus-banner-main-heading {
@@ -88,6 +97,11 @@
 }
 /* Extra small devices */
 @media (max-width: 480px) {
+    .contactus-banner-body {
+        /* padding: 3.125rem 1.5rem; */
+        background-image: linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    }
     .contactus-banner-main-heading {
         font-size: 1.75rem;
     }
