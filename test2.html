@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI - Powered Automation | EdFoal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body,
+        html {
+            font-family: 'Arial', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .service-detail {
+            margin: 100px;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 3rem 2rem;
+            gap: 2rem;
+        }
+
+        .service-detail-text {
+            flex: 1 1 50%;
+        }
+
+        .service-detail-subheading {
+            color: #1A65EB;
+            opacity: 0.6;
+            font-size: 16px;
+            line-height: 20px;
+            margin-bottom: 8px;
+        }
+
+        .service-detail-heading {
+            font-size: 32px;
+            color: #021526;
+            line-height: 24px;
+            margin-bottom: 24px;
+        }
+
+        .service-detail-content {
+            font-size: 16px;
+            color: #03346E;
+            opacity: 0.5;
+            line-height: 20px;
+            margin-bottom: 24px;
+            max-width: 620px;
+        }
+
+        .service-detail-list {
+            display: flex;
+            gap: 2rem;
+            margin-top: 80px;
+        }
+
+        .service-detail-list .column {
+            flex: 1;
+        }
+
+        .service-detail-list ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .service-detail-list li {
+            margin-bottom: 20px;
+        }
+
+        .service-detail-image {
+            flex: 1 1 40%;
+        }
+
+        .service-detail img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .service-detail-reviews {
+            background: #F3F4F6;
+            /* text-align: center; */
+            padding: 3rem 2rem;
+        }
+
+        .service-detail-reviews-subheading {
+            text-align: center;
+            color: #1A65EB;
+            opacity: 0.6;
+            font-size: 16px;
+            line-height: 20px;
+            margin-bottom: 8px;
+        }
+
+        .service-detail-reviews-heading {
+            text-align: center;
+            font-size: 32px;
+            color: #021526;
+            line-height: 24px;
+            margin-bottom: 24px;
+        }
+
+        .service-detail-reviews-tagline {
+            text-align: center;
+            font-size: 16px;
+            color: #03346E;
+            opacity: 0.5;
+            line-height: 20px;
+            margin-bottom: 24px;
+            /* max-width: 620px; */
+            /* text-align: center; */
+        }
+
+        .service-detail-carousel {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-detail-carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .service-detail-review {
+            background: white;
+            border: 1px solid #1A65EB;
+            /* padding: 1.5rem; */
+            margin: 0 1rem;
+            width: 320px;
+            border-radius: 10px;
+        }
+
+        .service-detail-review-content {
+            font-size: 14px;
+            color: #000;
+            opacity: 0.5;
+            line-height: 18px;
+            margin-top: 35px;
+            margin-left: 30px;
+            margin-right: 30px;
+            margin-bottom: 40px;
+        }
+
+        .service-detail-prev,
+        .service-detail-next {
+            /* background: #0d2a53; */
+            color: #021526;
+            border: none;
+            font-size: 2rem;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .service-detail-prev {
+            left: 0;
+        }
+
+        .service-detail-next {
+            right: 0;
+        }
+
+        .service-detail-stars {
+            color: #000;
+            font-size: 15px;
+            margin-bottom: 32px;
+            margin-top: 30px;
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+
+        .service-detail-author {
+            /* margin-top: 1rem; */
+            font: 16px;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .service-detail-author small {
+            display: block;
+            font-weight: normal;
+            color: #fff;
+            opacity: 0.5;
+        }
+
+        .service-detail-demo {
+            display: flex;
+            flex-wrap: wrap;
+            /* padding: 3rem 2rem; */
+            /* background: #0056d2; */
+            color: white;
+        }
+
+        .service-detail-demo-text {
+
+            padding-top: 30px;
+            padding-left: 100px;
+            /* padding: 3rem 2rem; */
+            flex: 1 1 40%;
+            width: 50%;
+            background-color: #1A65EB;
+        }
+
+        .service-detail-demo-text-heading {
+            font-size: 32px;
+            color: #fff;
+            margin-bottom: 16px;
+        }
+
+        .service-detail-demo-text-content {
+            font-size: 16px;
+            color: white;
+            opacity: 0.5;
+        }
+
+        .service-detail-demo-form {
+            background-color: #ffffff;
+            /* padding: 30px; */
+            padding-left: 50px;
+            padding-right: 100px;
+            padding-top: 80px;
+            padding-bottom: 30px;
+            border-radius: 10px;
+            width: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #service-detail-demoForm {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .service-detail-form-group {
+            display: flex;
+            align-items: center;
+            /* Center label vertically with input */
+            gap: 20px;
+        }
+
+        .service-detail-demo-form-label {
+            width: 150px;
+            /* Fix width for label */
+            text-align: left;
+            /* Text align left inside label */
+            /* font-weight: bold; */
+            font-size: 16px;
+            opacity: 0.6;
+            color: #021526;
+        }
+
+        .service-detail-form-group input,
+        .service-detail-form-group textarea {
+            flex: 1;
+            /* Take remaining space */
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #00B3FF;
+            border-radius: 5px;
+        }
+
+        .service-detail-form-group input::placeholder {
+            color: #1A65EB;
+            opacity: 0.2;
+        }
+        .service-detail-button-centered{
+            margin-top: 20px;
+            width: 100%;
+            align-items: center;
+            text-align: center;
+            color: black;
+        }
+        .service-detail-button-centered-content{
+            font-size: 12px;
+            margin-top: 16px;
+            margin-bottom: 16px;
+            color: #000;
+            opacity: 0.6;
+        }
+        .service-detail-button-centered-content strong{
+            /* font-size: 12px; */
+            color: #1A65EB;
+            /* opacity: 0.6; */
+        }
+        .service-detail-button {
+            background-color: #021526;
+            color: #fff;
+            padding: 10px 50px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            align-self: flex-start;
+            /* Button stays on left */
+        }
+
+        .service-detail-button:hover {
+            background-color: #154ec3;
+        }
+
+        .service-detail-text-in-form {
+            font-size: 16px;
+            color: #021526;
+            opacity: 0.5;
+        }
+
+        .service-detail-text-in-form-right {
+            font-size: 14px;
+            color: #021526;
+            /* opacity: 0.5; */
+            width: 80%;
+            /* Set 50% width */
+            text-align: right;
+            /* Align text to right */
+            margin-left: auto;
+            /* Push the div itself to the right */
+        }
+        .service-detail-text-in-form-right strong{
+            color: #1A65EB;
+            font-size: 16px;
+        }
+
+        .service-detail-author-info {
+            background-color: #1A65EB;
+            display: flex;
+            align-items: center;
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            /* margin-top: 1rem; */
+        }
+
+        .service-detail-profile-pic {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="service-detail">
+        <div class="service-detail-text">
+            <p class="service-detail-subheading">Our Service</p>
+            <h3 class="service-detail-heading">AI - Powered Automation</h3>
+            <p class="service-detail-content">In today’s fast-paced business environment, efficiency is the key to
+                staying competitive. At EdFoal AI, we specialize in AI-powered automation solutions that transform your
+                operations by streamlining workflows and eliminating manual, time-consuming tasks.</p>
+            <p class="service-detail-content">Our automation services are designed to enhance productivity, reduce
+                operational costs, and allow your team to focus on more strategic, value-driven activities. By
+                leveraging the power of AI, your business can achieve greater accuracy, speed, and cost-efficiency.</p>
+
+            <div class="service-detail-list">
+                <div class="column">
+                    <ul>
+                        <li>✔ Intelligent Process Automation</li>
+                        <li>✔ Seamless Integration</li>
+                        <li>✔ Scalability</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <ul>
+                        <li>✔ Customizable Workflows</li>
+                        <li>✔ Real-Time Monitoring & Reporting</li>
+                        <li>✔ Error Reduction & Accuracy</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-detail-image">
+            <img src="./assets/image/services.png" alt="AI Automation">
+        </div>
+    </section>
+
+    <section class="service-detail-reviews">
+        <p class="service-detail-reviews-subheading">Reviews</p>
+        <h2 class="service-detail-reviews-heading">Feature Reviews</h2>
+        <p class="service-detail-reviews-tagline">Discover the Highlights of Our Solutions!</p>
+
+        <div class="service-detail-carousel">
+            <!-- <button class="prev">&#10094;</button> -->
+            <div class="service-detail-carousel-inner">
+                <div class="service-detail-review">
+                    <div class="service-detail-stars">★★★★☆</div>
+                    <p class="service-detail-review-content">Nemo asper natur sedra magni ratione serui nesciunt est dolorem ipsum
+                        dolor sit amet consec tetur adipisci velit numsuam modi tempora incidunt magnam.Nemo asper natur
+                        sedra magni ratione serui nesciunt est dolorem ipsum dolor sit amet consec tetur adipisci velit
+                    </p>
+                    <div class="service-detail-author-info">
+                        <img class="service-detail-profile-pic" src="./assets/image/client.png" alt="Profile Picture">
+                        <div class="author">
+                            Firstname Lastname<br>
+                            <small>Location/Designation</small>
+                            <small>Role</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="service-detail-review">
+                <div class="service-detail-stars">★★★★☆</div>
+                <p class="service-detail-review-content">
+                    Nemo asper natur sedra magni ratione serui nesciunt est dolorem ipsum
+                    dolor sit amet consec tetur adipisci velit numsuam modi tempora incidunt magnam.Nemo asper natur
+                    sedra magni ratione serui nesciunt est dolorem ipsum dolor sit amet consec tetur adipisci velit
+                </p>
+                <div class="service-detail-author-info">
+                    <img class="service-detail-profile-pic" src="./assets/image/client.png" alt="Profile Picture">
+                    <div class="service-detail-author">
+                        Firstname Lastname<br>
+                        <small>Location/Designation</small>
+                        <small>Role</small>
+                    </div>
+                </div>
+            </div>
+            <div class="service-detail-review">
+                <div class="service-detail-stars">★★★★☆</div>
+                <p class="service-detail-review-content">Nemo asper natur sedra magni ratione serui nesciunt est dolorem ipsum
+                    dolor sit amet consec tetur adipisci velit numsuam modi tempora incidunt magnam.Nemo asper natur
+                    sedra magni ratione serui nesciunt est dolorem ipsum dolor sit amet consec tetur adipisci velit
+                </p>
+                <div class="service-detail-author-info">
+                    <img class="service-detail-profile-pic" src="./assets/image/client.png" alt="Profile Picture">
+                    <div class="service-detail-author">
+                        Firstname Lastname<br>
+                        <small>Location/Designation</small>
+                        <small>Role</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <!-- <button class="next">&#10095;</button> -->
+        </div>
+    </section>
+
+    <section class="service-detail-demo">
+        <div class="service-detail-demo-text">
+            <h2 class="service-detail-demo-text-heading">Let’s Schedule your demo</h2>
+            <p class="service-detail-demo-text-content">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, .</p>
+        </div>
+        <div class="service-detail-demo-form">
+            <form id="service-detail-demoForm">
+                <div class="service-detail-form-group">
+                    <label class="service-detail-demo-form-label" for="fullName">Full Name</label>
+                    <input id="fullName" type="text" placeholder="Enter your full name" required>
+                </div>
+                <div class="service-detail-form-group">
+                    <label class="service-detail-demo-form-label" for="workEmail">Work Email</label>
+                    <input id="workEmail" type="email" placeholder="Enter your work email" required>
+                </div>
+                <div class="service-detail-form-group">
+                    <label class="service-detail-demo-form-label" for="phone">Phone</label>
+                    <input id="phone" type="tel" placeholder="Enter your phone number" required>
+                </div>
+                <div class="service-detail-text-in-form">
+                    <p>For a more tailored demo, please tell us about your company (optional)</p>
+                </div>
+                <div class="service-detail-form-group">
+                    <label class="service-detail-demo-form-label" for="company">Company</label>
+                    <input id="company" type="text" placeholder="Enter your company">
+                </div>
+                <div class="service-detail-form-group">
+                    <label class="service-detail-demo-form-label" for="role">Role/Position</label>
+                    <input id="role" type="text" placeholder="Enter your role/position">
+                </div>
+                <div class="service-detail-form-group">
+                    <label class="service-detail-demo-form-label" for="role">Potentional Usecase</label>
+                    <input id="role" type="text" placeholder="Describe">
+                </div>
+                <div class="service-detail-text-in-form-right">
+                    <p>Want to add more detail <u><strong>Click Here !</strong></u></p>
+                </div>
+                <div class="service-detail-button-centered">
+                    <p class="service-detail-button-centered-content">Feel free contact us at <strong>info@edfoal.com</strong></p>
+                    <button class="service-detail-button" type="submit">Contact Us</button>
+                    <p class="service-detail-button-centered-content">Field marked with * are required to complete demo</p>
+                </div>
+               
+            </form>
+        </div>
+
+    </section>
+
+    <script>
+        const carouselInner = document.querySelector('.carousel-inner');
+        const prev = document.querySelector('.prev');
+        const next = document.querySelector('.next');
+        let index = 0;
+
+        next.addEventListener('click', () => {
+            index = (index + 1) % 3;
+            carouselInner.style.transform = `translateX(-${index * 320}px)`;
+        });
+
+        prev.addEventListener('click', () => {
+            index = (index - 1 + 3) % 3;
+            carouselInner.style.transform = `translateX(-${index * 320}px)`;
+        });
+
+        document.getElementById('demoForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Thank you! We will get in touch soon.');
+        });
+    </script>
+
+</body>
+
+</html>

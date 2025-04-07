@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Edfoal</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #fff;
+            color: #021526;
+        }
+
+        .contact-us-section {
+            padding: 50px;
+            background: #f9f9f9;
+        }
+
+        .contact-us-container {
+            /* margin: 0 auto; */
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            background: #fff;
+            padding: 40px;
+            /* box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); */
+        }
+
+        .contact-us-left {
+            flex: 1;
+
+            padding-left: 50px;
+            padding-top: 40px;
+            padding-right: 50px;
+        }
+
+        .contact-us-right {
+            flex: 1;
+
+        }
+
+        .contact-us-left-h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .contact-us-left-h2 span {
+            color: #007BFF;
+        }
+
+        .contact-us-description {
+            font-size: 16px;
+            color: #001427;
+            opacity: 0.6;
+            margin-bottom: 20px;
+        }
+
+        .contact-us-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-us-form-group {
+            display: flex;
+            align-items: center;
+            /* Center vertically */
+            margin-bottom: 15px;
+        }
+
+        .contact-us-form-group-label {
+            font-size: 16px;
+            color: #03346e;
+            opacity: 0.8;
+            margin-bottom: 0;
+            /* font-weight: 600; */
+            width: 150px;
+            /* Fixed label width */
+            text-align: left;
+        }
+
+        .contact-us-form-group input,
+        .contact-us-form-group textarea {
+            flex: 1;
+            padding: 12px;
+            border: 1px solid #C5CACD;
+            margin-bottom: 16px;
+            border-radius: 6px;
+            font-size: 14px;
+            width: 100%;
+        }
+
+        .contact-us-form-group input::placeholder {
+            color: #03346E;
+            opacity: 0.2;
+        }
+
+        .contact-us-textarea {
+            resize: vertical;
+            min-height: 100px;
+            color: #03346E;
+            opacity: 0.2;
+        }
+
+        .contact-us-text-in-form {
+            font-size: 14px;
+            color: #021526;
+            opacity: 0.6;
+            margin-bottom: 10px;
+            margin-left: 150px;
+            /* Align with input start */
+        }
+
+        .contact-us-form-check {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            color: #000;
+            opacity: 0.6;
+            /* margin-left: 150px; Align with input start */
+        }
+
+        .contact-us-form-check input {
+            margin-right: 10px;
+        }
+
+        .contact-us-submit-btn {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 14px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 15px;
+            width: 100%;
+            transition: background 0.3s;
+        }
+
+        .contact-us-submit-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .contact-us-field-note {
+            margin-top: 10px;
+            font-size: 12px;
+            color: gray;
+            text-align: center;
+        }
+
+        .contact-us-contact-icons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+            margin-top: 20px;
+            /* margin-left: 150px; aligns nicely with inputs */
+            flex-wrap: wrap;
+            /* responsive: goes to next line on mobile */
+        }
+
+        .contact-us-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-us-contact-icon-img {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+        }
+
+        .contact-us-contact-right {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact-us-contact-map {
+            width: 100%;
+            /* height: auto; */
+            /* border-radius: 12px; */
+            object-fit: cover;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .contact-us-contact-container {
+                flex-direction: column;
+            }
+
+            .contact-us-form-group {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .contact-us-form-group label {
+                margin-bottom: 5px;
+            }
+
+            .contact-us-text-in-form,
+            .contact-us-form-check,
+            .contact-us-contact-icons {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="contact-us-section">
+        <div class="contact-us-container">
+            <div class="contact-us-left">
+                <h2 class="contact-us-left-h2">Get in <span>Touch</span></h2>
+                <p class="contact-us-description">
+                    Tailored technologies designed to drive your business forward and address your unique challenges!
+                </p>
+
+                <form id="contactForm">
+                    <div class="contact-us-form-group">
+                        <label for="fullName" class="contact-us-form-group-label">Full Name</label>
+                        <input id="fullName" type="text" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="contact-us-form-group">
+                        <label for="workEmail" class="contact-us-form-group-label">Work Email</label>
+                        <input id="workEmail" type="email" placeholder="Enter your work email" required>
+                    </div>
+
+                    <div class="contact-us-form-group">
+                        <label for="phone" class="contact-us-form-group-label">Phone</label>
+                        <input id="phone" type="tel" placeholder="Enter your phone number" required>
+                    </div>
+
+                    <div class="contact-us-text-in-form">
+                        <p>For a more tailored demo, please tell us about your company (optional)</p>
+                    </div>
+
+                    <div class="contact-us-form-group">
+                        <label for="company" class="contact-us-form-group-label">Company</label>
+                        <input id="contact-us-company" type="text" placeholder="Enter your company name">
+                    </div>
+
+                    <div class="contact-us-form-group">
+                        <label for="geoFocus" class="contact-us-form-group-label">Geo Focus</label>
+                        <input id="geoFocus" type="text" placeholder="Enter your company's location">
+                    </div>
+
+                    <div class="contact-us-form-group">
+                        <label for="potentialUsecase" class="contact-us-form-group-label">Potential Usecase</label>
+                        <textarea id="potentialUsecase" placeholder="Describe"></textarea>
+                    </div>
+
+                    <div class="contact-us-form-check">
+                        <input type="checkbox" id="protectData">
+                        <label for="protectData">I want to protect my data</label>
+                    </div>
+
+                    <button type="submit" class="contact-us-submit-btn">Contact Us</button>
+                    <div class="contact-us-form-check">
+                        <p class="contact-us-field-note">Field marked with * are required to complete demo</p>
+                    </div>
+                    <div class="contact-us-contact-icons">
+                        <div class="contact-us-contact-item">
+                            <img src="./assets/image/distance.png" alt="Location" class="contact-us-contact-icon-img">
+                            <p>Lorem ipsum dolor amet,<br>consectetur adipiscing</p>
+                        </div>
+
+                        <div class="contact-us-contact-item">
+                            <img src="./assets/image/alternate_email.png" alt="Email"
+                                class="contact-us-contact-icon-img">
+                            <p>demo@satxart.com <br> you@website.com</p>
+                        </div>
+
+                        <div class="contact-us-contact-item">
+                            <img src="./assets/image/call.png" alt="Phone" class="contact-us-contact-icon-img">
+                            <p>+91 1234567890 <br> +91 986543210</p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="contact-us-contact-right">
+                <img src="./assets/image/map.png" alt="Map" class="contact-us-contact-map">
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Simple form submission handling
+        const contactForm = document.getElementById('contactForm');
+
+        contactForm.addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent real form submission
+            alert('Form submitted successfully!');
+        });
+    </script>
+
+</body>
+
+</html>
