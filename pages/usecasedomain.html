@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Usecases</title>
-    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/home.css">
+    <link rel="stylesheet" href="../assets/css/usecasedomain.css">
 </head>
 <body>
     <header>
@@ -20,17 +21,17 @@
             <button class="contact-btn">Contact Us</button>
         </nav>
     </header>
-    <section class="about-banner-body">
-        <div class="about-banner-grid-overlay"></div>
-        <div class="about-banner-content">
-            <div class="about-banner-about-label">Usecases</div>
-            <h1 class="about-banner-main-heading">Tailored AI Solutions</h1>
-            <p class="about-banner-subtitle">Explore how we're transforming businesses with cutting-edge AI solutions
+    <section class="usecase-banner-body">
+        <div class="usecase-banner-grid-overlay"></div>
+        <div class="usecase-banner-content">
+            <div class="usecase-banner-about-label">Usecases</div>
+            <h1 class="usecase-banner-main-heading">Tailored AI Solutions</h1>
+            <p class="usecase-banner-subtitle">Explore how we're transforming businesses with cutting-edge AI solutions
                 tailored just for you!</p>
         </div>
     </section>
     <section class="usecases-grid">
-        <div class="usecases-card real-estate" onclick="redirectTo('real-estate.html')">
+        <div class="usecases-card real-estate" onclick="redirectTo('usecase.html')">
           <div class="usecases-card-content">
             <div class="usecases-card-title">For Real Estate Agencies</div>
             <div class="usecases-card-icon">
@@ -165,5 +166,10 @@
             <p>Your Company - 2024 All rights reserved.</p>
         </div>
     </footer>
+    <script>
+      function redirectTo(page) {
+        window.location.href = page;
+      }
+    </script>
 </body>
 </html>

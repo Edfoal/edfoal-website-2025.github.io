@@ -1,0 +1,543 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+/* About Us */
+.about-banner-body {
+    font-family: Arial, sans-serif;
+    background-color: #1a3875;
+    min-height: 332px;
+    display: grid;
+    place-items: center;
+    position: relative;
+    overflow: hidden;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    padding: 60px 40px;
+    text-align: center;
+}
+
+/* Grid Overlay inside the section */
+.about-banner-grid-overlay {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    opacity: 0.2;
+}
+
+/* Content */
+.about-banner-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+}
+
+.about-banner-about-label {
+    color: #6EACDA;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.about-banner-main-heading {
+    color: #E2E2B6;
+    font-size: 54px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.about-banner-subtitle {
+    color: #FFFFFF;
+    opacity: 0.5;
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+/* Tablet (Medium screens) */
+@media (max-width: 1024px) {
+    .about-banner-main-heading {
+        font-size: 42px;
+    }
+
+    .about-banner-subtitle {
+        font-size: 20px;
+    }
+
+    .about-banner-about-label {
+        font-size: 18px;
+    }
+}
+
+/* Mobile (Small screens) */
+@media (max-width: 768px) {
+    .about-banner-body {
+        padding: 50px 24px;
+    }
+
+    .about-banner-main-heading {
+        font-size: 34px;
+    }
+
+    .about-banner-subtitle {
+        font-size: 18px;
+    }
+
+    .about-banner-about-label {
+        font-size: 16px;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+    .about-banner-main-heading {
+        font-size: 28px;
+    }
+
+    .about-banner-subtitle {
+        font-size: 16px;
+    }
+
+    .about-banner-about-label {
+        font-size: 15px;
+    }
+}
+
+
+
+/* about Us Hero */
+.about-hero-section {
+    background-color: #F1F4F6;
+    /* min-height: 100vh; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+.about-hero-container {
+    /* max-width: 1200px; */
+    display: flex;
+    gap: 100px;
+    align-items: center;
+}
+
+.about-hero-image-section {
+    flex: 1;
+    max-width: 50%;
+}
+
+.about-hero-image-section img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.about-hero-content-section {
+    flex: 1;
+    max-width: 50%;
+}
+
+.about-hero-about-label {
+    color: #1A65EB;
+    opacity: 0.6;
+    font-size: 16px;
+    /* text-transform: uppercase; */
+    margin-bottom: 16px;
+}
+
+.about-hero-main-heading {
+    color: #021526;
+    font-size: 32px;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.about-hero-description {
+    color: #03346E;
+    opacity: 0.5;
+    font-size: 16px;
+    line-height: 1.6;
+    /* margin-bottom: 1.5rem; */
+}
+
+@media (max-width: 768px) {
+    .about-hero-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .about-hero-image-section,
+    .about-hero-content-section {
+        max-width: 100%;
+    }
+}
+
+/* About NGO Card */
+.about-ngo-section {
+    padding: 20px;
+    background: #fff;
+    text-align: center;
+}
+
+.about-ngo-subtitle {
+    color: #1A65EB;
+    opacity: 0.6;
+    text-decoration: none;
+    font-size: 16px;
+    /* font-weight: bold; */
+    margin-bottom: 8px;
+}
+.about-ngo-hero {
+    margin-bottom: 50px;
+}
+.about-ngo-hero h1 {
+    font-size: 32px;
+    margin-bottom: 16px;
+    color: #021526;
+}
+.about-ngo-hero p {
+    color: #03346E;
+    opacity: 0.5;
+    font-size: 15px;
+    /* max-width: 600px; */
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.about-ngo-cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-bottom: 40px;
+}
+
+.about-ngo-card {
+    flex: 1 1 300px;
+    max-width: 380px;
+    padding: 30px;
+    border: 1px solid #1A65EB;
+    border-radius: 10px;
+    text-align: center;
+    background: #fff;
+    box-shadow: 0 2px 10px #1A65EB;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-ngo-card::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('vw-logo.png') no-repeat center;
+    opacity: 0.1;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.about-ngo-logo {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.about-ngo-card h2 {
+    margin-bottom: 20px;
+    color: #021526;
+    position: relative;
+    z-index: 1;
+}
+
+.about-ngo-card p {
+    color: #03346E;
+    opacity: 0.6;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.about-ngo-social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.about-ngo-social-icons img {
+    width: 24px;
+    height: 24px;
+}
+
+.about-ngo-cta-button {
+    font-size: 20px;
+    display: inline-block;
+    padding: 5px 40px;
+    background: #1A65EB;
+    color: #E2E2B6;
+    text-decoration: none;
+    border-radius: 25px;
+    text-align: center;
+    /* font-weight: bold; */
+}
+/* About Us Team Member */
+.team-section {
+    background-color: #1A65EB;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    color: white;
+    flex-wrap: wrap; /* Allows content to wrap on smaller screens */
+}
+
+.team-content {
+    max-width: 40%;
+    flex: 1;
+}
+
+.team-content-sub-heading {
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.team-content-heading {
+    font-size: 32px;
+    margin: 5px 0;
+    color: #E2E2B6;
+    margin-bottom: 48px;
+}
+
+.team-content-paragraph {
+    font-size: 20px;
+    opacity: 0.5;
+    line-height: 24px;
+    margin-top: 5px;
+    margin-bottom: 74px;
+    color: #fff;
+}
+
+.connect-btn {
+    font-size: 16px;
+    margin-top: 15px;
+    background-color: #021526;
+    color: #E2E2B6;
+    border: none;
+    padding: 10px 40px;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.connect-btn:hover {
+    background-color: #0f4bd1;
+}
+
+/* Grid Layout for Team Members */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    max-width: 60%;
+    width: 100%;
+}
+
+/* Team Member Card */
+.team-member {
+    position: relative;
+    text-align: center;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.team-member img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.team-member-name {
+    font-size: 16px;
+    font-weight: medium;
+    color: #021526;
+    margin-top: 10px;
+}
+
+.team-member-designation {
+    font-size: 14px;
+    color: #E2E2B6;
+    opacity: 0.6;
+    margin-bottom: 15px;
+}
+
+/* Social Media Icons Overlay */
+.team-member .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.team-member:hover .overlay {
+    opacity: 1;
+}
+
+.overlay a {
+    color: white;
+    margin: 0 10px;
+    font-size: 24px;
+    transition: transform 0.3s;
+}
+
+.overlay a:hover {
+    transform: scale(1.2);
+}
+
+/* Responsive Layout */
+@media (max-width: 1024px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr); /* Show 2 cards on tablet view */
+    }
+}
+
+@media (max-width: 600px) {
+    .team-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-content {
+        max-width: 100%;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr; /* Show 1 card on mobile */
+        gap: 20px;
+        width: 100%;
+    }
+
+    .team-member img {
+        height: 200px;
+    }
+}
+
+/* About TExtitominal */
+.testimonial-section-about-us {
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    gap: 40px;
+    flex-wrap: wrap;
+    background-color: #f9f9f9;
+}
+
+.testimonial-text-about-us {
+    flex: 1;
+    /* min-width: ; */
+    max-width: 40%;
+}
+
+.testimonial-text-sub-heading {
+    color: #1A65EB;
+    font-size: 16px;
+    opacity: 0.6;
+    margin-bottom: 8px;
+}
+
+.testimonial-text-heading {
+    font-size: 42px;
+    color: #001427;
+    margin: 0 0 15px;
+}
+
+.testimonial-text-content {
+    color: #03346E;
+    opacity: 0.5;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.testimonial-logos {
+    display: flex;
+    flex: 1;
+    flex-wrap: nowrap;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.testimonial-logos::-webkit-scrollbar {
+    display: none;
+}
+
+.testimonial-logo {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 210px;
+    height: 190px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.testimonial-logo img {
+    max-width: 145px;
+    max-height: 80px;
+    object-fit: contain;
+}
+
+.testimonial-logo:hover {
+    transform: scale(1.1);
+}
+@media (max-width: 768px) {
+    .testimonial-text-about-us {
+        max-width: 100%;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 30px;
+        text-align: center;
+      }
+    
+    .testimonial-text-heading{
+        font-size: 42px;
+    color: #001427;
+    margin: 0 0 15px;
+    }
+    .testimonial-logos {
+      flex-direction: column;
+      align-items: flex-start;
+      height: auto;
+    }
+  
+    .testimonial-logo {
+      width: 210px;
+      height: 120px;
+    }
+  }

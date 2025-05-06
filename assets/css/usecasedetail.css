@@ -1,0 +1,129 @@
+/* Usecase Detail */
+/* Hero Section */
+.usecase-detail-hero {
+  position: relative;
+}
+
+.usecase-detail-hero-img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.usecase-detail-hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  background: white;
+  padding: 40px;
+  width: 80%;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.usecase-detail-sample-text {
+  font-size: 14px;
+  color: #1A65EB;
+  text-align: center;
+  margin-bottom: 8px;
+  opacity: 0.6;
+}
+
+.usecase-detail-hero-content h1 {
+  font-size: 32px;
+  margin: 20px 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+.usecase-detail-hero-content hr {
+  margin: 50px auto;
+  border: none;
+  border-top: 2px solid #ddd;
+  width: 90%;
+}
+
+.usecase-detail-hero-content h2 {
+  font-size: 20px;
+  margin-bottom: 16px;
+  color: #021526;
+}
+
+.usecase-detail-hero-content p, 
+.usecase-detail-hero-content ul {
+  opacity: 0.65;
+  color: #021526;
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 32px;
+}
+
+.usecase-detail-hero-content ul {
+  list-style: disc inside;
+  padding-left: 20px;
+}
+
+.usecase-detail-hero-content li {
+  margin-bottom: 10px;
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 768px) {
+  /* On mobile devices, the hero content will take up more width and reduce the font sizes */
+  .usecase-detail-hero-content {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .usecase-detail-sample-text {
+    font-size: 12px;
+  }
+
+  .usecase-detail-hero-content h1 {
+    font-size: 24px;
+  }
+
+  .usecase-detail-hero-content h2 {
+    font-size: 18px;
+  }
+
+  .usecase-detail-hero-content p, 
+  .usecase-detail-hero-content ul {
+    font-size: 14px;
+  }
+
+  .usecase-detail-hero-img {
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* On very small screens (phones in portrait), make further adjustments */
+  .usecase-detail-hero-content {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .usecase-detail-sample-text {
+    font-size: 10px;
+  }
+
+  .usecase-detail-hero-content h1 {
+    font-size: 20px;
+  }
+
+  .usecase-detail-hero-content h2 {
+    font-size: 16px;
+  }
+
+  .usecase-detail-hero-content p, 
+  .usecase-detail-hero-content ul {
+    font-size: 12px;
+  }
+
+  .usecase-detail-hero-img {
+    height: 200px;
+  }
+}
