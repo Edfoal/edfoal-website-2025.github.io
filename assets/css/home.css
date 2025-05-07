@@ -65,6 +65,8 @@ body {
 
 /* Hamburger icon - hidden by default */
 .hamburger {
+    /* align-items: end; */
+    /* text-align: right; */
     display: none;
     flex-direction: column;
     gap: 5px;
@@ -128,8 +130,8 @@ body {
     background-image: linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
     background-size: 75px 75px;
-    min-height: 100vh;
-    padding: 80px 40px 40px;
+    min-height: 75vh;
+    padding: 50px 80px;
     position: relative;
     z-index: 1;
     display: flex;
@@ -138,12 +140,13 @@ body {
 }
 
 .hero {
-    margin-top: 40px;
-    max-width: 800px;
+    /* margin-top: 40px; */
+    max-width: 50vw;
 }
 
-.subtitle {
-    color: #6EACDA;
+.home-hero-subtitle {
+    color: #fff;
+    opacity: 0.4;
     font-size: 1rem;
     margin-bottom: 1rem;
 }
@@ -200,8 +203,10 @@ body {
 }
 
 .phone-mockup {
+    margin-right: 5rem;
+    margin-right: 1.25rem;
     width: 100%;
-    max-width: 400px;
+    max-width: 35vw;
     height: auto;
     animation-delay: 1s;
     margin-left: auto;
@@ -209,14 +214,17 @@ body {
 
 /* Media Queries */
 @media (max-width: 1024px) {
+    .container{
+        align-items: center;
+    }
     .title {
-        font-size: 2.25rem;
-        max-width: 90%;
+        font-size: 2rem;
+        max-width: 100%;
     }
 
     .description {
         font-size: 1rem;
-        max-width: 90%;
+        max-width: 100%;
     }
 
     .phone-mockup {
@@ -230,13 +238,20 @@ body {
 
 @media (max-width: 768px) {
     .container {
-        padding: 60px 20px;
+        /* padding: 60px 20px; */
+        text-align: center;
     }
 
     .hero {
-        margin-top: 20px;
+        /* margin-top: 20px; */
+        text-align: center;
+        /* width: 100%; */
+        padding: 0;
+        margin: 0;
     }
-
+    .title{
+        font-size: 1rem;
+    }
     .floating-elements {
         position: static;
         transform: none;
@@ -246,26 +261,28 @@ body {
 
     .phone-mockup {
         margin: 0 auto;
-        max-width: 250px;
+        margin-top: 3rem;
+        margin-bottom: 3.125rem;
+        max-width: 60vw;
     }
 }
 
 @media (max-width: 480px) {
     .title {
-        font-size: 1.8rem;
+        font-size: 1rem;
     }
-
     .description {
         font-size: 0.9rem;
     }
 
     .cta-button {
-        padding: 10px 24px;
-        font-size: 0.8rem;
+        /* height: 5vh; */
+        padding: 0.5rem 0.625rem;
+        font-size: 0.6rem;
     }
 
     .container {
-        padding: 40px 16px;
+        padding: 10px 6px;
     }
 }
 
@@ -293,9 +310,13 @@ body {
 
 @media (max-width: 768px) {
     .title {
-        font-size: 40px;
+        font-size: 2rem;
     }
-
+    .hero{
+        max-width: 80vw;
+        margin-top: 1.5rem;
+        width: 100vw;
+    }
     .floating-elements {
         position: static;
         margin-top: 50px;
@@ -315,12 +336,11 @@ body {
 }
 
 .partners-heading {
-    font-family: 'Segoe UI', Roboto, sans-serif;
-    font-size: 24px;
-    font-weight: 700;
     color: #333;
-    white-space: nowrap;
-    margin-right: 30px;
+    font-size: 1.25rem;
+    line-height: 1.2;
+    margin-bottom: 24px;
+    /* max-width: 100%; */
 }
 
 /* Scroller Wrapper for overflow control */
@@ -369,8 +389,10 @@ body {
     }
 
     .partners-heading {
-        font-size: 20px;
-        margin-right: 0;
+        margin: 0 auto; /* Center heading */
+        width: 100%; /* Ensures it wraps within screen */
+        word-wrap: break-word; /* Ensures long words wrap */
+        text-align: center;
     }
 
     .logo-scroller-wrapper {
