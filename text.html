@@ -4,144 +4,228 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Navbar with Logo and Hamburger</title>
-    <!-- <link rel="stylesheet" href="styles.css"> -->
-     <style>
-        /* Basic styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    <title>Document</title>
+    <style>
+        /* css to reset all the designs */
 
-body {
-    font-family: Arial, sans-serif;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f4f4f4;
-}
+        /* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap'); */
 
-/* Header and navigation styling */
-header {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-nav {
-    display: flex;
-    justify-content: space-between; /* Space between logo and hamburger */
-    align-items: center;
-    width: 100%;
-    max-width: 1200px;
-    padding: 0 20px;
-}
+        html {
+            font-size: 62.5%;
+            font-family: 'Roboto', sans-serif;
+        }
 
-.logo img {
-    height: 50px;
-}
+        li {
+            list-style: none;
+        }
 
-ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style-type: none;
-    flex: 1;
-}
+        a {
+            text-decoration: none;
+        }
 
-ul li {
-    margin: 0 20px;
-}
+        /* css to reset all the designs */
 
-ul li a {
-    text-decoration: none;
-    color: #333;
-    font-size: 18px;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: color 0.3s;
-}
+        /* add styles on elements */
 
-ul li a:hover {
-    color: #007BFF;
-}
+        .header {
+            /* border-bottom: 1px solid #E2E8F0; */
+            background-color: #143A76;
+        }
 
-/* Hamburger menu styling */
-.hamburger {
-    display: none;
-    cursor: pointer;
-    font-size: 30px;
-    color: #333;
-}
+        .navbar {
+            position: relative;
+            /* Needed for absolute centering of nav-menu */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 1.5rem;
+        }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: row; /* Maintain row direction for logo and hamburger */
-        align-items: center;
-    }
+        @media only screen and (min-width: 769px) {
+            .nav-menu {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
 
-    .logo {
-        margin-right: auto; /* Push the logo to the left */
-    }
+        .nav-logo img {
+            height: 21px;
+            /* Adjust as needed */
+            width: auto;
+        }
 
-    ul {
-        flex-direction: column;
-        width: 100%;
-        align-items: flex-start;
-        display: none; /* Initially hide the menu */
-    }
+        .hamburger {
+            display: none;
+        }
 
-    ul li {
-        margin: 10px 0;
-    }
+        .bar {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 5px auto;
+            -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            /* background-color: #101010; */
+            background-color: #fff;
+        }
 
-    .hamburger {
-        display: block; /* Show the hamburger icon */
-    }
+        .nav-menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-    .hamburger.active + ul {
-        display: block; /* Show the menu when hamburger is clicked */
-    }
-}
+        .nav-item {
+            margin-left: 5rem;
+        }
 
-     </style>
+        .nav-link {
+            /* font-size: 1.6rem; */
+            font-size: 2rem;
+            /* color: #475569; */
+            color: #E2E2B6;
+            opacity: 0.5;
+            /* change */
+        }
+
+        .nav-link:hover {
+            color: #E2E2B6;
+            opacity: 1;
+        }
+        .nav-menu.active {
+                left: 0;
+                color: red;
+            }
+        .nav-logo {
+            /* font-size: 2.1rem; */
+            font-size: 3rem;
+            font-weight: 500;
+            /* color: #482ff7; */
+            color: #fff;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 5rem;
+                flex-direction: column;
+                /* background-color: #fff; */
+                background-color: #222;
+                width: 100%;
+                border-radius: 10px;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow:
+                    0 10px 27px rgba(0, 0, 0, 0.05);
+            }
+
+            .nav-link {
+                color: #fff;
+            }
+
+            .nav-menu.active {
+                left: 0;
+                color: #222;
+            }
+
+            .nav-item {
+                margin: 2.5rem 0;
+            }
+
+            .hamburger {
+                display: block;
+                cursor: pointer;
+            }
+
+            .hamburger.active .bar:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger.active .bar:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+
+            .hamburger.active .bar:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+
+        }
+
+        /* add styles on elements */
+    </style>
 </head>
 
 <body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="#" class="nav-logo">
+                <img src="assets/image/footerlogo.png" alt="Logo" />
+            </a>
 
-    <header>
-        <nav>
-            <div class="logo">
-                <a href="#"><img src="logo.png" alt="Logo"></a>
-            </div>
-            <div class="hamburger" id="hamburger">
-                <span>&#9776;</span> <!-- Hamburger icon -->
-            </div>
-            <ul id="menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="./index.html" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Contact</a>
+                </li>
             </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </nav>
     </header>
+    <body>
+        <h1>
+            This is
+        </h1>
+    </body>
     <script>
-        // Hamburger menu toggle functionality
-        const hamburger = document.getElementById('hamburger');
-        const menu = document.getElementById('menu');
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
 
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active'); // Toggle the active class on hamburger
-            menu.classList.toggle('active'); // Toggle the visibility of the menu
-        });
+        hamburger.addEventListener("click", mobileMenu);
 
+        function mobileMenu() {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        }
+
+
+        // when we click on hamburger icon its close 
+
+        const navLink = document.querySelectorAll(".nav-link");
+
+        navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+        function closeMenu() {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }
+
+        navLink.forEach(link => {
+    link.addEventListener("click", function () {
+        navLink.forEach(item => item.classList.remove("active")); // remove from all
+        this.classList.add("active"); // add to clicked one
+    });
+});
     </script>
-    <!-- <script src="script.js"></script> Link to external JS file for hamburger functionality -->
 </body>
 
 </html>

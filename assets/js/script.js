@@ -95,3 +95,30 @@ document.querySelectorAll('.footer a[href^="#"]').forEach(anchor => {
 document.querySelector('.connect-btn').addEventListener('click', function () {
     alert('Thank you for connecting with us!');
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    // Hamburger toggle
+    hamburger.addEventListener("click", function () {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+    });
+
+    // Close menu and set active link
+    navLinks.forEach(link => {
+        link.addEventListener("click", function () {
+            // Close mobile menu
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+
+            // Remove active class from all links
+            navLinks.forEach(item => item.classList.remove("active"));
+
+            // Add active class to clicked link
+            this.classList.add("active");
+        });
+    });
+});
