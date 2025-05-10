@@ -1,15 +1,17 @@
 /* // UseCase Domain */
 /* Usecases Grid */
 .usecase-banner-body {
-    font-family: Arial, sans-serif;
-    background-color: #1a3875;
-    min-height: 332px;
-    display: grid;
-    place-items: center;
-    position: relative;
-    overflow: hidden;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
+  font-family: Arial, sans-serif;
+  background-color: #1a3875;
+  min-height: 18.75rem;
+  display: grid;
+  place-items: center;
+  position: relative;
+  overflow: hidden;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  padding: 3.75rem 2.5rem;
+  text-align: center;
 }
 .usecase-banner-grid-overlay {
     grid-column: 1 / -1;
@@ -19,50 +21,51 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-    background-size: 50px 50px;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.1) 0.0625rem, transparent 0.0625rem),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0.0625rem, transparent 0.0625rem);
+    background-size: 3.125rem 3.125rem;
     opacity: 0.2;
 }
 .usecase-banner-content {
     text-align: center;
     position: relative;
     z-index: 1;
-    max-width: 800px;
+    max-width: 50rem;
 }
 .usecase-banner-about-label {
-    color: #6EACDA;
-    font-size: 20px;
-    margin-bottom: 8px;
+  color: #6EACDA;
+  font-size: 1rem;
+  margin-bottom: 0.3125rem;
 }
 
 .usecase-banner-main-heading {
-    color: #E2E2B6;
-    font-size: 54px;
-    margin-bottom: 20px;
-    font-weight: bold;
+  color: #E2E2B6;
+  font-size: 2.25rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
 }
 
 .usecase-banner-subtitle {
-    color: #FFFFFF;
-    opacity: 0.5;
-    font-size: 24px;
+  color: #FFFFFF;
+  opacity: 0.5;
+  font-size: 1.25rem;
+  line-height: 1.5;
 }
 /* Usecases Grid */
 .usecases-grid {
-  padding: 40px;
+  padding: 2.5rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 45px;
+  grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
+  gap: 2.8125rem;
   justify-items: center;
 }
 
 .usecases-card {
-  height: 300px;
-  width: 300px;
+  height: 18.75rem;
+  width: 18.75rem;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.1);
   text-align: center;
   cursor: pointer;
   transition: transform 0.3s;
@@ -76,7 +79,7 @@
 }
 
 .usecases-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-0.3125rem);
 }
 
 /* Overlay */
@@ -101,7 +104,7 @@
   z-index: 2;
   width: 100%;
   height: 100%;
-  padding: 20px;
+  padding: 1.25rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -110,15 +113,15 @@
 
 .usecases-card-title {
   font-weight: bold;
-  font-size: 24px;
+  font-size: 1.25rem;
   text-align: center;
 }
 
 .usecases-card-icon {
-  margin-top: 50px;
+  margin-top: 3.125rem;
   opacity: 0;
   transition: opacity 0.3s ease, transform 0.3s ease;
-  transform: translateY(20px);
+  transform: translateY(1.25rem);
 }
 
 .usecases-card:hover .usecases-card-icon {
@@ -127,8 +130,8 @@
 }
 
 .usecases-card-icon img {
-  width: 30px;
-  height: 30px;
+  width: 1.875rem;
+  height: 1.875rem;
 }
 
 /* Background Images */
@@ -140,67 +143,67 @@
 /* Responsive Media Queries */
 
 /* Medium Screens (Tablets) */
-@media (max-width: 1024px) {
+@media (max-width: 64rem) {
   .usecases-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
+    gap: 1.875rem;
   }
 
   .usecases-card {
-    height: 250px;
-    width: 250px;
+    height: 15.625rem;
+    width: 15.625rem;
   }
 
   .usecases-card-title {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 
   .usecases-card-icon img {
-    width: 25px;
-    height: 25px;
+    width: 1.5625rem;
+    height: 1.5625rem;
   }
 }
 
 /* Small Screens (Mobile Landscape & Portrait) */
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
   .usecases-grid {
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 1.25rem;
   }
 
   .usecases-card {
-    height: 220px;
-    width: 220px;
+    height: 13.75rem;
+    width: 13.75rem;
   }
 
   .usecases-card-title {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
 
   .usecases-card-icon img {
-    width: 20px;
-    height: 20px;
+    width: 1.25rem;
+    height: 1.25rem;
   }
 }
 
 /* Extra Small Screens (Mobile Portrait) */
-@media (max-width: 480px) {
+@media (max-width: 30rem) {
   .usecases-grid {
     grid-template-columns: 1fr;
-    gap: 15px;
+    gap: 0.9375rem;
   }
 
   .usecases-card {
-    height: 200px;
-    width: 200px;
+    height: 12.5rem;
+    width: 12.5rem;
   }
 
   .usecases-card-title {
-    font-size: 16px;
+    font-size: 1rem;
   }
 
   .usecases-card-icon img {
-    width: 18px;
-    height: 18px;
+    width: 1.125rem;
+    height: 1.125rem;
   }
 }

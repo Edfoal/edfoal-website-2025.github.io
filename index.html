@@ -10,24 +10,20 @@
 
 <body>
     <header>
-        <nav class="navbar">
-            <div class="nav-left">
-                <div class="logo">EdFoal</div>
+        <nav>
+            <div class="logo">
+                <a href="#"><img src="assets/image/footerlogo.png" alt="Logo"></a>
             </div>
-            <ul class="nav-links">
+            <div class="hamburger" id="hamburger">
+                <span>&#9776;</span> <!-- Hamburger icon -->
+            </div>
+            <ul id="menu" class="nav-ul">
                 <li><a href="#" class="active">Home</a></li>
-                <li><a href="./pages/aboutus.html">About us</a></li>
-                <li><a href="./pages/servicelist.html">Services</a></li>
-                <li><a href="./pages/usecasedomain.html">Usecases</a></li>
-                <li><a href="./pages/contactus.html">Contact Us</a></li>
+                <li><a href="#" class="unactive">About</a></li>
+                <li><a href="#" class="unactive">Services</a></li>
+                <li><a href="#" class="unactive">Portfolio</a></li>
+                <li><a href="#" class="unactive">Contact</a></li>
             </ul>
-            <!-- <div class="nav-right">
-                <div class="hamburger" onclick="toggleMenu()">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-            </div> -->
         </nav>
     </header>
     <section>
@@ -35,7 +31,9 @@
         <div class="container">
             <div class="hero">
                 <div class="home-hero-subtitle">Empower Support, Elevate Experience</div>
-                <div class="title"><h4 >Tailored AI Solutions for Your Business</h4></div>
+                <div class="title">
+                    <h4>Tailored AI Solutions for Your Business</h4>
+                </div>
                 <p class="description">
                     Unlock efficiency, reduce costs, and save time with EdFoal AI's customized AI-powered solutions,
                     designed to seamlessly integrate with your unique business needs.
@@ -70,14 +68,14 @@
     </section>
     <section>
         <div class="servicecontainer">
-            <header class="serviceheader">
+            <div class="serviceheader">
                 <p class="services-title">Our Services</p>
                 <h1 class="main-title">Custom AI Solutions for Your Needs</h1>
                 <p class="subtitle">
                     At EdFoal AI, we deliver tailored AI solutions to boost efficiency, cut costs,
                     and empower your business with advanced technology.
                 </p>
-            </header>
+            </div>
 
             <div class="services-grid">
                 <!-- Column 1 -->
@@ -144,89 +142,94 @@
     </section>
     <section class="whychooseussection">
         <div class="whychooseuscontainer">
-          <div class="nav-link">
-            <a href="#">Why Choose Us</a>
-          </div>
-      
-          <div class="choosetitle">
-            <h1>Driving Exponential Growth With Innovation</h1>
-            <p>
-              At EdFoal AI, we go beyond traditional customer support solutions. Discover what sets us apart and why businesses trust us to elevate their customer service experience.
-            </p>
-          </div>
-      
-          <div class="cards-scroll-container">
-            <div class="cards" id="cardCarousel">
-              <!-- Card 1 -->
-              <div class="card">
-                <div class="card-inner">
-                  <div class="card-front">
-                    <img src="assets/image/card1.png" class="card-icon" alt="AI Icon" />
-                    <h3 class="cardheading">Tailored AI Solutions</h3>
-                  </div>
-                  <div class="card-back">
-                    <h3 class="cardheading">Tailored AI Solutions</h3>
-                    <p>We don't believe in one-size-fits-all. Our team customizes every AI solution to align perfectly with your unique business needs.</p>
-                    <a href="#" class="choose-learn-more">Learn More</a>
-                  </div>
-                </div>
-              </div>
-      
-              <!-- Card 2 -->
-              <div class="card">
-                <div class="card-inner">
-                  <div class="card-front">
-                    <img src="assets/image/card2.png" class="card-icon" alt="Expertise Icon" />
-                    <h3 class="cardheading">Proven Expertise</h3>
-                  </div>
-                  <div class="card-back">
-                    <h3 class="cardheading">Proven Expertise</h3>
-                    <p>Our team consists of AI experts with years of experience in delivering successful solutions.</p>
-                    <a href="#" class="choose-learn-more">Learn More</a>
-                  </div>
-                </div>
-              </div>
-      
-              <!-- Card 3 -->
-              <div class="card">
-                <div class="card-inner">
-                  <div class="card-front">
-                    <img src="assets/image/card3.png" class="card-icon" alt="Technology Icon" />
-                    <h3 class="cardheading">Scalable Technology</h3>
-                  </div>
-                  <div class="card-back">
-                    <h3 class="cardheading">Scalable Technology</h3>
-                    <p>Our AI solutions are designed to grow with your business, ensuring long-term scalability.</p>
-                    <a href="#" class="choose-learn-more">Learn More</a>
-                  </div>
-                </div>
-              </div>
-      
-              <!-- Card 4 -->
-              <div class="card">
-                <div class="card-inner">
-                  <div class="card-front">
-                    <img src="assets/image/card3.png" class="card-icon" alt="Technology Icon" />
-                    <h3 class="cardheading">Scalable Technology</h3>
-                  </div>
-                  <div class="card-back">
-                    <h3 class="cardheading">Scalable Technology</h3>
-                    <p>Our AI solutions are designed to grow with your business, ensuring long-term scalability.</p>
-                    <a href="#" class="choose-learn-more">Learn More</a>
-                  </div>
-                </div>
-              </div>
+            <div class="why-choose-us-subtitle">
+                <p>Why Choose Us</p>
             </div>
-          </div>
-      
-          <div class="carousel-dots">
+
+            <div class="choosetitle">
+                <h1>Driving Exponential Growth With Innovation</h1>
+                <p>
+                    At EdFoal AI, we go beyond traditional customer support solutions. Discover what sets us apart and
+                    why businesses trust us to elevate their customer service experience.
+                </p>
+            </div>
+
+            <div class="cards-scroll-container">
+                <div class="cards" id="cardCarousel">
+                    <!-- Card 1 -->
+                    <div class="card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img src="assets/image/card1.png" class="card-icon" alt="AI Icon" />
+                                <h3 class="cardheading">Tailored AI Solutions</h3>
+                            </div>
+                            <div class="card-back">
+                                <h3 class="cardheading">Tailored AI Solutions</h3>
+                                <p>We don't believe in one-size-fits-all. Our team customizes every AI solution to align
+                                    perfectly with your unique business needs.</p>
+                                <a href="#" class="choose-learn-more">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img src="assets/image/card2.png" class="card-icon" alt="Expertise Icon" />
+                                <h3 class="cardheading">Proven Expertise</h3>
+                            </div>
+                            <div class="card-back">
+                                <h3 class="cardheading">Proven Expertise</h3>
+                                <p>Our team consists of AI experts with years of experience in delivering successful
+                                    solutions.</p>
+                                <a href="#" class="choose-learn-more">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img src="assets/image/card3.png" class="card-icon" alt="Technology Icon" />
+                                <h3 class="cardheading">Scalable Technology</h3>
+                            </div>
+                            <div class="card-back">
+                                <h3 class="cardheading">Scalable Technology</h3>
+                                <p>Our AI solutions are designed to grow with your business, ensuring long-term
+                                    scalability.</p>
+                                <a href="#" class="choose-learn-more">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img src="assets/image/card3.png" class="card-icon" alt="Technology Icon" />
+                                <h3 class="cardheading">Scalable Technology</h3>
+                            </div>
+                            <div class="card-back">
+                                <h3 class="cardheading">Scalable Technology</h3>
+                                <p>Our AI solutions are designed to grow with your business, ensuring long-term
+                                    scalability.</p>
+                                <a href="#" class="choose-learn-more">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="carousel-dots">
             <div class="dot active"></div>
             <div class="dot"></div>
             <div class="dot"></div>
-          </div>
+          </div> -->
         </div>
-      </section>
-      <!-- <section class="testimonial-section">
+    </section>
+    <!-- <section class="testimonial-section">
         <div class="left-content">
             <h4 class="testimonial-title">TESTIMONIAL</h4>
             <p><span class="customer-stories">Customers</span> <br> <span class="customer-stories2">Stories</span></p>
@@ -238,8 +241,8 @@
         </div>
         <div class="right-content">
             <div class="testimonial-cards"> -->
-                <!-- Testimonial Card 1 -->
-                <!-- <div class="testcard">
+    <!-- Testimonial Card 1 -->
+    <!-- <div class="testcard">
                     <div class="stars">★★★★☆</div>
                     <p class="testimonial-text">Nemo asper natur sedra magni ratione serui nesciunt est dolorem ipsum dolor sit amet consec tetur adipisci velit numsuam modi tempora incidunt magnam.</p>
                     <div class="user-info">
@@ -251,8 +254,8 @@
                         </div>
                     </div>
                 </div> -->
-                <!-- Testimonial Card 2 -->
-                <!-- <div class="testcard">
+    <!-- Testimonial Card 2 -->
+    <!-- <div class="testcard">
                     <div class="stars">★★★★☆</div>
                     <p class="testimonial-text">Nemo asper natur sedra magni ratione serui nesciunt est dolorem ipsum dolor sit amet consec tetur adipisci velit numsuam modi tempora incidunt magnam.</p>
                     <div class="user-info">
@@ -264,8 +267,8 @@
                         </div>
                     </div>
                 </div> -->
-                <!-- Testimonial Card 3 -->
-                <!-- <div class="testcard">
+    <!-- Testimonial Card 3 -->
+    <!-- <div class="testcard">
                     <div class="stars">★★★★☆</div>
                     <p class="testimonial-text">Nemo asper natur sedra magni ratione serui nesciunt est dolorem ipsum dolor sit amet consec tetur adipisci velit numsuam modi tempora incidunt magnam.</p>
                     <div class="user-info">
@@ -277,8 +280,8 @@
                         </div>
                     </div>
                 </div> -->
-                <!-- Testimonial Card 4 -->
-                <!-- <div class="testcard">
+    <!-- Testimonial Card 4 -->
+    <!-- <div class="testcard">
                     <div class="stars">★★★★☆</div>
                     <p class="testimonial-text">Nemo asper natur sedra magni ratione serui nesciunt est dolorem ipsum dolor sit amet consec tetur adipisci velit numsuam modi tempora incidunt magnam.</p>
                     <div class="user-info">
@@ -298,6 +301,8 @@
         <div class="industriescontainer">
             <p class="industriessubtitle">Industries Cover</p>
             <h1 class="industriestitle">Industries We Serve</h1>
+            <p class="industriesdescription">Discover the wide range of industries we serve, delivering innovative
+                solutions tailored to meet their unique challenges and goals.</p>
             <div class="horizontal-line"></div>
             <div class="industriescarousel-container">
                 <button class="industriesnav-btn industriesprev-btn">&#10094;</button>
@@ -326,23 +331,28 @@
                 <button class="industriesnav-btn industriesnext-btn">&#10095;</button>
             </div>
             <div class="horizontal-line"></div>
-            <p class="industriesdescription">Discover the wide range of industries we serve, delivering innovative
-                solutions tailored to meet their unique challenges and goals.</p>
+
         </div>
     </section>
     <!-- <div class="herobody"></div> -->
     <section class="banner-section">
-        <p class="banner-help-text">How Can we help you ?</p>
-        <h1 class="banner-main-heading">How Can We Elevate Your Success?</h1>
-        <p class="banner-sub-text">Let us unlock new opportunities and drive your business forward with our expert
-            solutions!</p>
-        <a href="#" class="banner-cta-button">Explore Our Services</a>
+        <div class="banner-content">
+            <p class="banner-help-text">How Can we help you ?</p>
+            <h1 class="banner-main-heading">How Can We Elevate Your Success?</h1>
+            <p class="banner-sub-text">
+                Let us unlock new opportunities and drive your business forward with our expert solutions!
+            </p>
+        </div>
+        <div class="banner-cta-wrapper">
+            <a href="#" class="banner-cta-button">Explore Our Services</a>
+        </div>
     </section>
+
 
     <footer class="footer">
         <div class="footer-content">
             <!-- Company Info -->
-            <div>
+            <div class="div-footer">
                 <img src="assets/image/footerlogo.png" alt="EdFoal" class="footer-logo">
                 <p class="footer-company-desc">
                     At EdFoal AI, we create tailored AI solutions to reduce costs, save time, and enhance business
@@ -509,56 +519,78 @@
 
     <script src="script.js"></script> -->|
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-    const prevBtn = document.querySelector('.industriesprev-btn');
-    const nextBtn = document.querySelector('.industriesnext-btn');
-    const carousel = document.querySelector('.industriescarousel');
-    const cards = document.querySelectorAll('.industry-card');
-    
-    // Scroll the carousel to the next or previous card
-    const scrollCarousel = (direction) => {
-        const cardWidth = cards[0].offsetWidth;
-        carousel.scrollBy({
-            left: direction === 'next' ? cardWidth : -cardWidth,
-            behavior: 'smooth'
+        document.addEventListener('DOMContentLoaded', function () {
+            const prevBtn = document.querySelector('.industriesprev-btn');
+            const nextBtn = document.querySelector('.industriesnext-btn');
+            const carousel = document.querySelector('.industriescarousel');
+            const cards = document.querySelectorAll('.industry-card');
+
+            // Scroll the carousel to the next or previous card
+            const scrollCarousel = (direction) => {
+                const cardWidth = cards[0].offsetWidth;
+                carousel.scrollBy({
+                    left: direction === 'next' ? cardWidth : -cardWidth,
+                    behavior: 'smooth'
+                });
+            };
+
+            // Event listeners for next and previous buttons
+            nextBtn.addEventListener('click', () => {
+                scrollCarousel('next');
+            });
+
+            prevBtn.addEventListener('click', () => {
+                scrollCarousel('prev');
+            });
         });
-    };
-
-    // Event listeners for next and previous buttons
-    nextBtn.addEventListener('click', () => {
-        scrollCarousel('next');
-    });
-
-    prevBtn.addEventListener('click', () => {
-        scrollCarousel('prev');
-    });
-});
     </script>
     <script>
         // Optional: Pause on hover (if needed)
         const cardsContainer = document.getElementById("cardCarousel");
         cardsContainer.addEventListener("mouseover", () => {
-          cardsContainer.style.animationPlayState = "paused";
+            cardsContainer.style.animationPlayState = "paused";
         });
         cardsContainer.addEventListener("mouseout", () => {
-          cardsContainer.style.animationPlayState = "running";
+            cardsContainer.style.animationPlayState = "running";
         });
-      </script>
-      <script>
+    </script>
+    <script>
         const prevBtn = document.getElementById('prevBtn');
         const nextBtn = document.getElementById('nextBtn');
         const testimonialCards = document.querySelector('.testimonial-cards');
-        
+
         let scrollSpeed = 300; // Adjust scroll speed here (in milliseconds)
-        
+
         nextBtn.addEventListener('click', () => {
             testimonialCards.scrollBy({ left: 320, behavior: 'smooth' });
         });
-        
+
         prevBtn.addEventListener('click', () => {
             testimonialCards.scrollBy({ left: -320, behavior: 'smooth' });
         });
-        </script>
+        // JavaScript to add active class on click
+const links = document.querySelectorAll('#menu a');
+
+links.forEach(link => {
+    link.addEventListener('click', function() {
+        // Remove the active class from all links
+        links.forEach(item => item.classList.remove('active'));
+
+        // Add active class to the clicked link
+        this.classList.add('active');
+    });
+});
+window.addEventListener('load', function() {
+    const currentPage = window.location.pathname; // Get the current page path
+    const links = document.querySelectorAll('#menu a');
+
+    links.forEach(link => {
+        if (link.getAttribute('href') === currentPage) {
+            link.classList.add('active'); // Add active class to the link matching the current page
+        }
+    });
+});
+    </script>
 </body>
 
 </html>

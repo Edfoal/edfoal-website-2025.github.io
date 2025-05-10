@@ -1,21 +1,23 @@
 /* Service Detailed */
 .service-detail {
-    margin: 80px;
+    margin: 5rem;
     display: flex;
     flex-wrap: wrap;
-    padding: 3rem 2rem;
-    gap: 2rem;
+    padding: 1.875rem 1.25rem;
+    gap: 1.25rem;
 }
 .service-detail-banner-body {
     font-family: Arial, sans-serif;
     background-color: #1a3875;
-    min-height: 332px;
+    min-height: 18.75rem;
     display: grid;
     place-items: center;
     position: relative;
     overflow: hidden;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
+    padding: 3.75rem 2.5rem;
+    text-align: center;
 }
 .service-detail-banner-grid-overlay {
     grid-column: 1 / -1;
@@ -25,34 +27,35 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-    background-size: 50px 50px;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.1) 0.0625rem, transparent 0.0625rem),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0.0625rem, transparent 0.0625rem);
+    background-size: 3.125rem 3.125rem;
     opacity: 0.2;
 }
 .service-detail-banner-content {
     text-align: center;
     position: relative;
     z-index: 1;
-    max-width: 800px;
+    max-width: 50rem;
 }
 .service-detail-banner-about-label {
     color: #6EACDA;
-    font-size: 20px;
-    margin-bottom: 8px;
+    font-size: 1rem;
+    margin-bottom: 0.3125rem;
 }
 
 .service-detail-banner-main-heading {
     color: #E2E2B6;
-    font-size: 54px;
-    margin-bottom: 20px;
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
     font-weight: bold;
 }
 
 .service-detail-banner-subtitle {
     color: #FFFFFF;
     opacity: 0.5;
-    font-size: 24px;
+    font-size: 1.25rem;
+    line-height: 1.5;
 }
 .service-detail-text {
     flex: 1 1 50%;
@@ -61,31 +64,31 @@
 .service-detail-subheading {
     color: #1A65EB;
     opacity: 0.6;
-    font-size: 16px;
-    line-height: 20px;
-    margin-bottom: 8px;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    margin-bottom: 0.5rem;
 }
 
 .service-detail-heading {
-    font-size: 32px;
+    font-size: 1.5rem;
     color: #021526;
-    line-height: 24px;
-    margin-bottom: 24px;
+    line-height: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .service-detail-content {
-    font-size: 16px;
+    font-size: 1rem;
     color: #03346E;
     opacity: 0.5;
-    line-height: 20px;
-    margin-bottom: 24px;
-    max-width: 620px;
+    line-height: 1.25rem;
+    margin-bottom: 1.5rem;
+    max-width: 38.75rem;
 }
 
 .service-detail-list {
     display: flex;
-    gap: 2rem;
-    margin-top: 80px;
+    gap: 1.25rem;
+    margin-top: 5rem;
 }
 
 .service-detail-list .column {
@@ -98,7 +101,7 @@
 }
 
 .service-detail-list li {
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
 }
 
 .service-detail-image {
@@ -107,41 +110,38 @@
 
 .service-detail img {
     width: 100%;
-    border-radius: 10px;
+    border-radius: 0.625rem;
 }
 
 .service-detail-reviews {
     background: #F3F4F6;
-    /* text-align: center; */
-    padding: 3rem 2rem;
+    padding: 1.875rem 1.25rem;
 }
 
 .service-detail-reviews-subheading {
     text-align: center;
     color: #1A65EB;
     opacity: 0.6;
-    font-size: 16px;
-    line-height: 20px;
-    margin-bottom: 8px;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    margin-bottom: 0.5rem;
 }
 
 .service-detail-reviews-heading {
     text-align: center;
-    font-size: 32px;
+    font-size: 1.5rem;
     color: #021526;
-    line-height: 24px;
-    margin-bottom: 24px;
+    line-height: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .service-detail-reviews-tagline {
     text-align: center;
-    font-size: 16px;
+    font-size: 1rem;
     color: #03346E;
     opacity: 0.5;
-    line-height: 20px;
-    margin-bottom: 24px;
-    /* max-width: 620px; */
-    /* text-align: center; */
+    line-height: 1.25rem;
+    margin-bottom: 2.25rem;
 }
 
 .service-detail-carousel {
@@ -159,31 +159,29 @@
 
 .service-detail-review {
     background: white;
-    border: 1px solid #1A65EB;
-    /* padding: 1.5rem; */
+    border: 0.0625rem solid #1A65EB;
     margin: 0 1rem;
-    width: 320px;
-    border-radius: 10px;
+    width: 20rem;
+    border-radius: 0.625rem;
 }
 
 .service-detail-review-content {
-    font-size: 14px;
+    font-size: 0.875rem;
     color: #000;
     opacity: 0.5;
-    line-height: 18px;
-    margin-top: 35px;
-    margin-left: 30px;
-    margin-right: 30px;
-    margin-bottom: 40px;
+    line-height: 1.125rem;
+    margin-top: 2.1875rem;
+    margin-left: 1.875rem;
+    margin-right: 1.875rem;
+    margin-bottom: 2.5rem;
 }
 
 .service-detail-prev,
 .service-detail-next {
-    /* background: #0d2a53; */
     color: #021526;
     border: none;
     font-size: 2rem;
-    padding: 0.5rem 1rem;
+    padding: 0.3125rem 0.625rem;
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -200,16 +198,15 @@
 
 .service-detail-stars {
     color: #000;
-    font-size: 15px;
-    margin-bottom: 32px;
-    margin-top: 30px;
-    margin-left: 30px;
-    margin-right: 30px;
+    font-size: 0.9375rem;
+    margin-bottom: 2rem;
+    margin-top: 1.875rem;
+    margin-left: 1.875rem;
+    margin-right: 1.875rem;
 }
 
 .service-detail-author {
-    /* margin-top: 1rem; */
-    font: 16px;
+    font: 1rem;
     color: #fff;
     font-weight: bold;
 }
@@ -224,65 +221,56 @@
 .service-detail-demo {
     display: flex;
     flex-wrap: wrap;
-    /* padding: 3rem 2rem; */
-    /* background: #0056d2; */
     color: white;
 }
 
 .service-detail-demo-text {
-
-    padding-top: 30px;
-    padding-left: 100px;
-    /* padding: 3rem 2rem; */
+    padding-top: 1.875rem;
+    padding-left: 6.25rem;
     flex: 1 1 40%;
     width: 50%;
     background-color: #1A65EB;
 }
 
 .service-detail-demo-text-heading {
-    font-size: 32px;
+    font-size: 2rem;
     color: #fff;
-    margin-bottom: 16px;
+    margin-bottom: 1rem;
 }
 
 .service-detail-demo-text-content {
-    font-size: 16px;
+    font-size: 1rem;
     color: white;
     opacity: 0.5;
+    margin-right: 1.75rem;
 }
 
 .service-detail-demo-form {
     background-color: #ffffff;
-    /* padding: 30px; */
-    padding-left: 50px;
-    padding-right: 100px;
-    padding-top: 80px;
-    padding-bottom: 30px;
-    border-radius: 10px;
+    padding-left: 3.125rem;
+    padding-right: 6.25rem;
+    padding-top: 5rem;
+    padding-bottom: 1.875rem;
+    border-radius: 0.625rem;
     width: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
 }
 
 #service-detail-demoForm {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 1.25rem;
 }
 
 .service-detail-form-group {
     display: flex;
     align-items: center;
-    /* Center label vertically with input */
-    gap: 20px;
+    gap: 1.25rem;
 }
 
 .service-detail-demo-form-label {
-    width: 150px;
-    /* Fix width for label */
-    text-align: left;
-    /* Text align left inside label */
-    /* font-weight: bold; */
-    font-size: 16px;
+    width: 9.375rem;
+    font-size: 1rem;
     opacity: 0.6;
     color: #021526;
 }
@@ -290,11 +278,10 @@
 .service-detail-form-group input,
 .service-detail-form-group textarea {
     flex: 1;
-    /* Take remaining space */
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #00B3FF;
-    border-radius: 5px;
+    padding: 0.625rem;
+    font-size: 1rem;
+    border: 0.0625rem solid #00B3FF;
+    border-radius: 0.3125rem;
 }
 
 .service-detail-form-group input::placeholder {
@@ -302,34 +289,31 @@
     opacity: 0.2;
 }
 .service-detail-button-centered{
-    margin-top: 20px;
+    margin-top: 1.25rem;
     width: 100%;
     align-items: center;
     text-align: center;
     color: black;
 }
 .service-detail-button-centered-content{
-    font-size: 12px;
-    margin-top: 16px;
-    margin-bottom: 16px;
+    font-size: 0.75rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     color: #000;
     opacity: 0.6;
 }
 .service-detail-button-centered-content strong{
-    /* font-size: 12px; */
     color: #1A65EB;
-    /* opacity: 0.6; */
 }
 .service-detail-button {
     background-color: #021526;
     color: #fff;
-    padding: 10px 50px;
+    padding: 0.625rem 3.125rem;
     border: none;
-    border-radius: 5px;
+    border-radius: 0.3125rem;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1rem;
     align-self: flex-start;
-    /* Button stays on left */
 }
 
 .service-detail-button:hover {
@@ -337,51 +321,46 @@
 }
 
 .service-detail-text-in-form {
-    font-size: 16px;
+    font-size: 1rem;
     color: #021526;
     opacity: 0.5;
 }
 
 .service-detail-text-in-form-right {
-    font-size: 14px;
+    font-size: 0.875rem;
     color: #021526;
-    /* opacity: 0.5; */
     width: 80%;
-    /* Set 50% width */
     text-align: right;
-    /* Align text to right */
     margin-left: auto;
-    /* Push the div itself to the right */
 }
 .service-detail-text-in-form-right strong{
     color: #1A65EB;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .service-detail-author-info {
     background-color: #1A65EB;
     display: flex;
     align-items: center;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    /* margin-top: 1rem; */
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+    padding-top: 0.9375rem;
+    padding-bottom: 0.9375rem;
+    border-bottom-left-radius: 0.625rem;
+    border-bottom-right-radius: 0.625rem;
 }
 
 .service-detail-profile-pic {
-    width: 50px;
-    height: 50px;
+    width: 3.125rem;
+    height: 3.125rem;
     object-fit: cover;
     border-radius: 50%;
-    margin-right: 20px;
+    margin-right: 1.25rem;
 }
 /* ===== Responsive Breakpoints ===== */
 
-/* Tablets (768px and below) */
-@media screen and (max-width: 768px) {
+/* Tablets (48rem and below) */
+@media screen and (max-width: 48rem) {
     .service-detail {
         flex-direction: column;
     }
@@ -391,13 +370,13 @@
     .service-detail-demo-text,
     .service-detail-demo-form {
         width: 100%;
-        padding: 20px;
+        padding: 1.25rem;
     }
 
     .service-detail-list {
         flex-direction: column;
-        gap: 1rem;
-        margin-top: 40px;
+        gap: 0.625rem;
+        margin-top: 2.5rem;
     }
 
     .service-detail-carousel-inner {
@@ -407,7 +386,7 @@
 
     .service-detail-review {
         width: 90%;
-        margin-bottom: 20px;
+        margin-bottom: 1.25rem;
     }
 
     .service-detail-demo {
@@ -439,15 +418,15 @@
     }
 }
 
-/* Phones (480px and below) */
-@media screen and (max-width: 480px) {
+/* Phones (30rem and below) */
+@media screen and (max-width: 30rem) {
     .service-detail{
-        margin: 10px;
+        margin: 0.625rem;
     }
     .service-detail-heading,
     .service-detail-reviews-heading,
     .service-detail-demo-text-heading {
-        font-size: 24px;
+        font-size: 1.5rem;
     }
 
     .service-detail-subheading,
@@ -455,12 +434,12 @@
     .service-detail-reviews-tagline,
     .service-detail-demo-text-content,
     .service-detail-button-centered-content {
-        font-size: 14px;
+        font-size: 0.875rem;
     }
 
     .service-detail-review-content {
-        font-size: 13px;
-        margin: 20px;
+        font-size: 0.8125rem;
+        margin: 1.25rem;
     }
 
     .service-detail-author-info {
@@ -469,6 +448,6 @@
     }
 
     .service-detail-profile-pic {
-        margin-bottom: 10px;
+        margin-bottom: 0.625rem;
     }
 }
