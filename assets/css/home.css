@@ -45,8 +45,8 @@ a {
 }
 
 .hamburger {
-    /* display: none; */
-    z-index: 9999;
+    display: none;
+    /* z-index: 9999; */
 }
 
 .bar {
@@ -66,11 +66,11 @@ a {
 }
 
 .nav-item {
-    margin-left: 3rem;
+    margin-left: 2rem;
 }
 
 .nav-link {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #E2E2B6;
     opacity: 0.5;
 }
@@ -137,14 +137,8 @@ a {
     }
 
     .hamburger {
-        position: fixed;
-        /* Make it fixed to keep it visible while scrolling */
-        top: 20px;
-        right: 20px;
+        /* to the top of everything */ 
         display: block;
-        cursor: pointer;
-        z-index: 9999;
-        /* Bring it to the top of everything */
     }
 
     .hamburger.active .bar:nth-child(2) {
@@ -333,20 +327,30 @@ a {
 }
 
 /* Media Queries */
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
+    .nav-item{
+        margin: 1rem;
+        font-size: 0px;
+    }
     .container {
         align-items: center;
         z-index: 1;
     }
-
+    .hero{
+        max-width: 80vw;
+    }
+    .home-hero-subtitle {
+        /* margin-top: 75px; */
+        max-width: 50%;
+    }
     .title {
         font-size: 2rem;
-        max-width: 100%;
+        max-width: 60%;
     }
 
     .description {
         font-size: 1rem;
-        max-width: 100%;
+        max-width: 60%;
     }
 
     .phone-mockup {
@@ -367,17 +371,22 @@ a {
 
     .hero {
         /* margin-top: 20px; */
-        text-align: center;
+        /* text-align: center; */
         /* width: 100%; */
-        padding: 0;
+        padding: 16px;
         margin: 0;
     }
 
     .title {
         font-size: 1rem;
+        max-width: 100%;
     }
     .home-hero-subtitle {
         margin-top: 75px;
+        max-width: 100%;
+    }
+    .description{
+        max-width: 100%;
     }
     .floating-elements {
         position: static;
@@ -440,10 +449,11 @@ a {
 @media (max-width: 768px) {
     .title {
         font-size: 2rem;
+        width: 100%;
     }
 
     .hero {
-        max-width: 80vw;
+        max-width: 100%;
         margin-top: 1.5rem;
         width: 100vw;
     }
@@ -687,6 +697,10 @@ a {
     .service-column {
         align-items: center;
     }
+    .servicecontainer {
+        padding: 40px 20px;
+        max-width: 100%;
+    }
 }
 
 @media (max-width: 600px) {
@@ -868,13 +882,14 @@ a {
 .card-back p {
     font-size: 1rem;
     margin-bottom: 20px;
+    color: #021526;
 }
 
 .choose-learn-more {
     padding: 10px 20px;
-    border: 2px solid #e2e2b6;
+    border: 2px solid #021526;
     border-radius: 5px;
-    color: #e2e2b6;
+    color: #021526;
     text-decoration: none;
     transition: all 0.3s;
 }
@@ -882,6 +897,7 @@ a {
 .choose-learn-more:hover {
     background: #e2e2b6;
     color: #021526;
+    border: 2px solid #e2e2b6;
 }
 
 .carousel-dots {
@@ -1532,7 +1548,7 @@ a {
 
 .div-footer {
     width: 100%;
-    text-align: center;
+    /* text-align: center; */
 }
 
 /* Medium Screens (Tablet) */
@@ -1589,6 +1605,9 @@ a {
 
     .footer-menu ul,
     .footer-contact-info {
+        text-align: center;
+    }
+    .div-footer{
         text-align: center;
     }
 }

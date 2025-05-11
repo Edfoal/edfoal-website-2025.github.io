@@ -416,6 +416,26 @@
         width: 100%;
         margin-left: 0;
     }
+    .service-detail-banner-about-label {
+        color: #6EACDA;
+    font-size: 0.9375rem;
+    margin-top: 24px;
+    margin-bottom: 0.3125rem;
+    }
+    
+    .service-detail-banner-main-heading {
+        color: #E2E2B6;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    }
+    
+    .service-detail-banner-subtitle {
+        color: #FFFFFF;
+    opacity: 0.5;
+    font-size: 1rem;
+    line-height: 1.5;
+    }
 }
 
 /* Phones (30rem and below) */

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usecase</title>
+    <link rel="stylesheet" href="/assets/css/home.css">
+    <link rel="stylesheet" href="/assets/css/usecasedetail.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+      <nav class="navbar">
+          <a href="#" class="nav-logo">
+              <img src="/assets/image/footerlogo.png" alt="Logo" />
+          </a>
+
+          <ul class="nav-menu">
+              <li class="nav-item">
+                  <a href="/index.html" class="nav-link">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a href="/pages/servicelist.html" class="nav-link">Services</a>
+              </li>
+              <li class="nav-item">
+                  <a href="/pages/aboutus.html" class="nav-link">About Us</a>
+              </li>
+              <li class="nav-item">
+                  <a href="/pages/usecasedomain.html" class="nav-link active">Usecases</a>
+              </li>
+              <li class="nav-item">
+                  <a href="/pages/contactus.html" class="nav-link">Contact Us</a>
+              </li>
+          </ul>
+          <div class="hamburger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+          </div>
+      </nav>
+  </header>
+
+    <!-- Hero Section -->
+    <section class="usecase-detail-hero">
+        <img src="/assets/image/Useecase/manu1.jpg" alt="Use Case Banner" class="usecase-detail-hero-img">
+        <div class="usecase-detail-hero-content">
+          <p class="usecase-detail-sample-text">Manufacturing Firms</p>
+          <h1>AI-Powered Quality Assurance in Manufacturing</h1>
+          <hr>
+      
+          <h2>Description</h2>
+          <p>AI-Powered Quality Assurance in Manufacturing involves leveraging artificial intelligence (AI) technologies to enhance and automate quality control processes within manufacturing industries. This approach employs AI algorithms to analyze and evaluate various aspects of the manufacturing process, products, or components to ensure consistent and high-quality output.</p>
+          
+          <h2>Issue</h2>
+          <p>Traditional quality assurance methods in manufacturing may be time-consuming, prone to human error, and limited in their ability to handle large volumes of products. Maintaining high standards of quality across a range of manufacturing operations can be challenging, and identifying defects or deviations from desired standards in real-time can be difficult.</p>
+      
+          <h2>Proposed Solution</h2>
+          <p>The proposed solution advocates for the integration of AI-powered quality assurance systems in manufacturing processes. Key features include:</p>
+          <ul>
+            <li><strong>Sensor Integration: </strong>Incorporate sensors and data collection devices to capture real-time data from manufacturing processes and product components.</li>
+            <li><strong>AI Algorithms and Machine Learning: </strong>Utilize AI algorithms and machine learning models to analyze the collected data, detect defects, deviations, or anomalies, and make real-time decisions based on predefined quality criteria</li>
+            <li><strong>Automated Alerts and Intervention: </strong>Implement automated alert systems to notify operators or automated systems to take corrective actions in case of identified quality issues.</li>
+            <li><strong>Continuous Improvement: </strong>Employ AI to identify patterns in defects and suggest process improvements to enhance overall product quality.</li>
+          </ul>
+      
+          <h2>Benefits</h2>
+          <p>The implementation of AI-Powered Quality Assurance in Manufacturing offers several advantages:</p>
+          <ul>
+            <li><strong>Enhanced Quality Control: </strong>AI algorithms can identify defects and anomalies with a high degree of accuracy, ensuring only products meeting defined quality standards are released.</li>
+            <li><strong>Cost Efficiency: </strong>Reduction in defect rates and waste leads to cost savings by minimizing product recalls, rework, and material wastage.</li>
+            <li><strong>Real-Time Monitoring: </strong>Provides real-time monitoring of manufacturing processes, enabling swift response to quality deviations and minimizing production downtime.</li>
+            <li><strong>Predictive Maintenance: </strong>AI can predict when machinery or equipment might fail, allowing proactive maintenance to prevent unexpected downtime and maintain optimal production levels.</li>
+            <li><strong>Data-Driven Insights: </strong>AI-generated data insights can inform process optimizations, contributing to improved manufacturing efficiency and consistent product quality.</li>
+          </ul>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburger = document.querySelector(".hamburger");
+            const navMenu = document.querySelector(".nav-menu");
+            const navLinks = document.querySelectorAll(".nav-link");
+
+            // Hamburger toggle
+            hamburger.addEventListener("click", function () {
+                hamburger.classList.toggle("active");
+                navMenu.classList.toggle("active");
+            });
+
+            // Close menu and set active link
+            navLinks.forEach(link => {
+                link.addEventListener("click", function () {
+                    // Close mobile menu
+                    hamburger.classList.remove("active");
+                    navMenu.classList.remove("active");
+
+                    // Remove active class from all links
+                    navLinks.forEach(item => item.classList.remove("active"));
+
+                    // Add active class to clicked link
+                    this.classList.add("active");
+                });
+            });
+        });
+    </script>
+    
+</body>
+</html>

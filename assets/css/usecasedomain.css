@@ -135,9 +135,29 @@
 }
 
 /* Background Images */
-.real-estate, .manufacturing, .education, .finance,
-.social-media, .customer-success, .retail, .logistics {
-  background-image: url('../image/usecase.png');
+.real-estate {
+  background-image: url('../image/realestate.png');
+}
+.manufacturing{
+  background-image: url('../image/manufa.png');
+} 
+.education{
+  background-image: url('../image/education.png');
+} 
+.finance{
+  background-image: url('../image/finance.png');
+}
+.social-media{
+  background-image: url('../image/ssmaa.png');
+} 
+.customer-success{
+  background-image: url('../image/customers.png');
+} 
+.retail{
+  background-image: url('../image/retails.png');
+} 
+.logistics{
+  background-image: url('../image/logiss.png');
 }
 
 /* Responsive Media Queries */
@@ -183,6 +203,24 @@
   .usecases-card-icon img {
     width: 1.25rem;
     height: 1.25rem;
+  }
+  .usecase-banner-about-label {
+    color: #6EACDA;
+    font-size: 0.9375rem;
+    margin-top: 24px;
+    margin-bottom: 0.3125rem;
+  }
+  .usecase-banner-main-heading {
+    color: #E2E2B6;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
+  .usecase-banner-subtitle {
+    color: #FFFFFF;
+    opacity: 0.5;
+    font-size: 1rem;
+    line-height: 1.5;
   }
 }
 

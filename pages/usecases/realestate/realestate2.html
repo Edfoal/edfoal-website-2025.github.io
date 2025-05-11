@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usecase</title>
+    <link rel="stylesheet" href="/assets/css/home.css">
+    <link rel="stylesheet" href="/assets/css/usecasedetail.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+      <nav class="navbar">
+          <a href="#" class="nav-logo">
+              <img src="/assets/image/footerlogo.png" alt="Logo" />
+          </a>
+
+          <ul class="nav-menu">
+              <li class="nav-item">
+                  <a href="/index.html" class="nav-link">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a href="/pages/servicelist.html" class="nav-link">Services</a>
+              </li>
+              <li class="nav-item">
+                  <a href="/pages/aboutus.html" class="nav-link">About Us</a>
+              </li>
+              <li class="nav-item">
+                  <a href="/pages/usecasedomain.html" class="nav-link active">Usecases</a>
+              </li>
+              <li class="nav-item">
+                  <a href="/pages/contactus.html" class="nav-link">Contact Us</a>
+              </li>
+          </ul>
+          <div class="hamburger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+          </div>
+      </nav>
+  </header>
+
+    <!-- Hero Section -->
+    <section class="usecase-detail-hero">
+        <img src="/assets/image/Useecase/realblog2.jpg" alt="Use Case Banner" class="usecase-detail-hero-img">
+        <div class="usecase-detail-hero-content">
+          <p class="usecase-detail-sample-text">Real Estate</p>
+          <h1>AI-Powered Customer Support in Real Estate</h1>
+          <hr>
+      
+          <h2>Description</h2>
+          <p>AI-Powered Customer Support revolutionizes real estate customer service by integrating AI chatbots. These chatbots efficiently provide prompt and precise responses, significantly elevating the overall customer experience. They operate around the clock, ensuring swift resolution of queries and concerns.</p>
+          
+          <h2>Issue</h2>
+          <p>Conventional customer support in the real estate sector often faces challenges in providing instant and round-the-clock responses to customer inquiries. Handling common questions regarding property listings and pricing in a personalized manner can be time-consuming and resource-intensive.</p>
+      
+          <h2>Proposed Solution</h2>
+          <p>Implementing AI-Powered Customer Support addresses these challenges effectively. The key features include:</p>
+          <ul>
+            <li><strong>24/7 Support:</strong> Chatbots ensure continuous availability, responding to customer queries instantly at any time of the day.</li>
+            <li><strong>Addressing Common Inquiries:</strong> The AI chatbots are equipped to handle typical questions related to property listings and pricing, streamlining responses and freeing up human resources.</li>
+            <li><strong>Personalized Responses: </strong> The AI chatbots tailor responses to individual customer needs, enhancing engagement and delivering a more satisfying customer interaction.</li>
+            <li><strong>Seamless Integration:</strong> The system can be easily integrated into existing platforms, ensuring a smooth and efficient adoption process.</li>
+          </ul>
+      
+          <h2>Benefits</h2>
+          <p>The integration of AI-Powered Customer Support in the real estate industry offers a range of advantages:</p>
+          <ul>
+            <li><strong>Enhanced Customer Experience:</strong> ACustomers receive quick and accurate responses, leading to a more satisfactory and efficient interaction.</li>
+            <li><strong>Operational Efficiency:</strong>Customers receive quick and accurate responses, leading to a more satisfactory and efficient interaction.</li>
+            <li><strong>24/7 Availability:</strong> Round-the-clock support ensures that customers can reach out and get assistance at their convenience, improving overall accessibility.</li>
+            <li><strong>Scalability and Flexibility:</strong> The system can be easily scaled to handle increased demand and adapted to changing customer needs without significant infrastructure changes.</li>
+          </ul>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburger = document.querySelector(".hamburger");
+            const navMenu = document.querySelector(".nav-menu");
+            const navLinks = document.querySelectorAll(".nav-link");
+
+            // Hamburger toggle
+            hamburger.addEventListener("click", function () {
+                hamburger.classList.toggle("active");
+                navMenu.classList.toggle("active");
+            });
+
+            // Close menu and set active link
+            navLinks.forEach(link => {
+                link.addEventListener("click", function () {
+                    // Close mobile menu
+                    hamburger.classList.remove("active");
+                    navMenu.classList.remove("active");
+
+                    // Remove active class from all links
+                    navLinks.forEach(item => item.classList.remove("active"));
+
+                    // Add active class to clicked link
+                    this.classList.add("active");
+                });
+            });
+        });
+    </script>
+    
+</body>
+</html>
