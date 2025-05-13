@@ -231,7 +231,6 @@
     max-width: 50%;
 }
 .contact-us-contact-map {
-    width: 100%;
     object-fit: cover;
 }
 /* Responsive */
@@ -341,7 +340,7 @@
 
     .contact-us-contact-map {
         width: 100%;
-        height: auto;
+        /* height: auto; */
     }
 }
 /* Medium devices (tablets, 768px and below) */
@@ -380,7 +379,7 @@
 
     .contact-us-contact-map {
         width: 100%;
-        height: auto;
+        /* height: auto; */
     }
 }
 /* Large devices (small desktops, 992px and below) */
