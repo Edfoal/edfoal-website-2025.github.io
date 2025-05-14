@@ -1,122 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Contact Us</title>
-    <link rel="stylesheet" href="../assets/css/home.css">
-    <link rel="stylesheet" href="../assets/css/contactus.css">
+    <link rel="stylesheet" href="../assets/css/home.css"/>
+    <link rel="stylesheet" href="../assets/css/contactus.css"/>
+
+    <style>
+        /* Thank You Modal Styles */
+        .thank-you-modal {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            left: 0; top: 0;
+            width: 100%; height: 100%;
+            max-width: 100vw;
+            background-color: rgba(26, 56, 117, 0.8);
+            /* opacity: 0.6; */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .thank-you-modal-content {
+            background-color: #fff;
+            padding: 30px 40px;
+            border-radius: 12px;
+            width: 60%;
+            max-width: 100%;
+            text-align: center;
+            box-shadow: 0 8px 16px rgba(26, 56, 117, 0.8);
+            animation: fadeIn 0.3s ease-in-out;
+            position: relative;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 10px; right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            color: #333;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
 </head>
 <body>
+    <!-- Your existing header and nav here -->
     <header class="header">
         <nav class="navbar">
             <a href="#" class="nav-logo">
                 <img src="../assets/image/footerlogo.png" alt="Logo" />
             </a>
-
             <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="../index.html" class="nav-link ">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="../pages/servicelist.html" class="nav-link">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a href="../pages/aboutus.html" class="nav-link">About Us</a>
-                </li>
-                <!-- <li class="nav-item">
-                    <a href="../pages/usecasedomain.html" class="nav-link">Usecases</a>
-                </li> -->
-                <li class="nav-item">
-                    <a href="../pages/contactus.html" class="nav-link active">Contact Us</a>
-                </li>
+                <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="../pages/servicelist.html" class="nav-link">Services</a></li>
+                <li class="nav-item"><a href="../pages/aboutus.html" class="nav-link">About Us</a></li>
+                <li class="nav-item"><a href="../pages/contactus.html" class="nav-link active">Contact Us</a></li>
             </ul>
             <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
             </div>
         </nav>
     </header>
+
+    <!-- Banner Section -->
     <section class="contactus-banner-body">
         <div class="contactus-banner-grid-overlay"></div>
         <div class="contactus-banner-content">
             <div class="contactus-banner-about-label">Contact Us</div>
             <h4 class="contactus-banner-main-heading">Tailored AI Solutions</h4>
-            <p class="contactus-banner-subtitle">Explore how we're transforming businesses with cutting-edge AI solutions
-                tailored just for you!</p>
+            <p class="contactus-banner-subtitle">Explore how we're transforming businesses with cutting-edge AI solutions tailored just for you!</p>
         </div>
     </section>
+
+    <!-- Contact Form Section -->
     <section class="contact-us-section">
         <div class="contact-us-container">
             <div class="contact-us-left">
                 <h2 class="contact-us-left-h2">Get in <span>Touch</span></h2>
-                <p class="contact-us-description">
-                    Tailored technologies designed to drive your business forward and address your unique challenges!
-                </p>
+                <p class="contact-us-description">Tailored technologies designed to drive your business forward and address your unique challenges!</p>
 
-                <form id="contactForm">
-                    <div class="contact-us-form-group">
-                        <label for="fullName" class="contact-us-form-group-label">Full Name</label>
-                        <input id="fullName" type="text" placeholder="Enter your full name" required>
-                    </div>
-
-                    <div class="contact-us-form-group">
-                        <label for="workEmail" class="contact-us-form-group-label">Work Email</label>
-                        <input id="workEmail" type="email" placeholder="Enter your work email" required>
-                    </div>
-
-                    <div class="contact-us-form-group">
-                        <label for="phone" class="contact-us-form-group-label">Phone</label>
-                        <input id="phone" type="tel" placeholder="Enter your phone number" required>
-                    </div>
-
-                    <div class="contact-us-text-in-form">
-                        <p>For a more tailored demo, please tell us about your company (optional)</p>
-                    </div>
-
-                    <div class="contact-us-form-group">
-                        <label for="company" class="contact-us-form-group-label">Company</label>
-                        <input id="contact-us-company" type="text" placeholder="Enter your company name">
-                    </div>
-
-                    <div class="contact-us-form-group">
-                        <label for="geoFocus" class="contact-us-form-group-label">Geo Focus</label>
-                        <input id="geoFocus" type="text" placeholder="Enter your company's location">
-                    </div>
-
-                    <div class="contact-us-form-group">
-                        <label for="potentialUsecase" class="contact-us-form-group-label">Potential Usecase</label>
-                        <textarea id="potentialUsecase" placeholder="Describe"></textarea>
-                    </div>
-
-                    <div class="contact-us-form-check">
-                        <input type="checkbox" id="protectData">
-                        <label for="protectData">I want to protect my data</label>
-                    </div>
-
-                    <button type="submit" class="contact-us-submit-btn">Contact Us</button>
-                    <div class="contact-us-form-check">
-                        <p class="contact-us-field-note">Field marked with * are required to complete demo</p>
-                    </div>
-                    <div class="contact-us-contact-icons">
-                        <div class="contact-us-contact-item">
-                            <img src="../assets/image/distance.png" alt="Location" class="contact-us-contact-icon-img">
-                            <p>Lorem ipsum dolor amet,<br>consectetur adipiscing</p>
+                <div class="form-container">
+                    <form id="contactForm" name="submit-to-google-sheet" method="post">
+                        <div class="contact-us-form-group">
+                            <label for="fullName" class="contact-us-form-group-label">Full Name</label>
+                            <input id="fullName" name="fullName" type="text" placeholder="Enter your full name" required>
                         </div>
 
-                        <div class="contact-us-contact-item">
-                            <img src="../assets/image/alternate_email.png" alt="Email"
-                                class="contact-us-contact-icon-img">
-                            <p>demo@satxart.com <br> you@website.com</p>
+                        <div class="contact-us-form-group">
+                            <label for="email" class="contact-us-form-group-label">Work Email</label>
+                            <input id="email" name="email" type="email" placeholder="Enter your work email" required>
                         </div>
 
-                        <div class="contact-us-contact-item">
-                            <img src="../assets/image/call.png" alt="Phone" class="contact-us-contact-icon-img">
-                            <p>+91 1234567890 <br> +91 986543210</p>
+                        <div class="contact-us-form-group">
+                            <label for="phone" class="contact-us-form-group-label">Phone</label>
+                            <input id="phone" name="phone" type="tel" placeholder="Enter your phone number" required>
                         </div>
+
+                        <div class="contact-us-text-in-form">
+                            <p>For a more tailored demo, please tell us about your company (optional)</p>
+                        </div>
+
+                        <div class="contact-us-form-group">
+                            <label for="company" class="contact-us-form-group-label">Company</label>
+                            <input id="company" name="company" type="text" placeholder="Enter your company name">
+                        </div>
+
+                        <div class="contact-us-form-group">
+                            <label for="geoFocus" class="contact-us-form-group-label">Geo Focus</label>
+                            <input id="geoFocus" name="geoFocus" type="text" placeholder="Enter your company's location">
+                        </div>
+
+                        <div class="contact-us-form-group">
+                            <label for="potentialUsecase" class="contact-us-form-group-label">Potential Usecase</label>
+                            <textarea id="potentialUsecase" name="potentialUsecase" placeholder="Describe"></textarea>
+                        </div>
+
+                        <div class="contact-us-form-check">
+                            <input type="checkbox" id="protectData" name="protectData">
+                            <label for="protectData">I want to protect my data</label>
+                        </div>
+
+                        <div id="loader" style="display: none;">
+                            <p>Submitting your form...</p>
+                        </div>
+
+                        <button type="submit" class="contact-us-submit-btn">Contact Us</button>
+                    </form>
+                </div>
+
+                <div class="contact-us-form-check">
+                    <p class="contact-us-field-note">Field marked with * are required to complete demo</p>
+                </div>
+
+                <div class="contact-us-contact-icons">
+                    <div class="contact-us-contact-item">
+                        <img src="../assets/image/alternate_email.png" alt="Email" class="contact-us-contact-icon-img">
+                        <p>demo@satxart.com you@website.com</p>
                     </div>
-                </form>
+                </div>
             </div>
 
             <div class="contact-us-contact-right">
@@ -125,14 +151,22 @@
         </div>
     </section>
 
+    <!-- Thank You Modal -->
+    <div id="thankYouModal" class="thank-you-modal">
+        <div class="thank-you-modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Thank You!</h2>
+            <p>Your message has been submitted successfully. We'll get back to you soon.</p>
+            <a href="../index.html"><button type="submit" class="contact-us-submit-btn">Take Me To Home</button>
+        </div>
+    </div>
+    
+    <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
-            <!-- Company Info -->
-            <div >
+            <div>
                 <img src="../assets/image/footerlogo.png" alt="EdFoal" class="footer-logo">
-                <p class="footer-company-desc">
-                    At EdFoal AI, we create tailored AI solutions to reduce costs, save time, and enhance business efficiency for growth.
-                </p>
+                <p class="footer-company-desc">At EdFoal AI, we create tailored AI solutions to reduce costs, save time, and enhance business efficiency for growth.</p>
                 <div class="footer-social-links">
                     <a href="#" class="footer-social-link">Fb.</a>
                     <a href="#" class="footer-social-link">Tw.</a>
@@ -140,20 +174,15 @@
                     <a href="#" class="footer-social-link">In.</a>
                 </div>
             </div>
-            
-            <!-- Our Pages -->
             <div class="footer-menu">
                 <h3>Our Pages</h3>
                 <ul>
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="./aboutus.html">About Us</a></li>
-                    <!-- <li><a href="./servicelist.html">Our Services</a></li> -->
                     <li><a href="./usecasedomain.html">Use Cases</a></li>
                     <li><a href="#">Contact Us</a></li>
                 </ul>
             </div>
-            
-            <!-- Services -->
             <div class="footer-menu">
                 <h3>Services</h3>
                 <ul>
@@ -163,8 +192,6 @@
                     <li><a href="./servicedetail.html">Service 4</a></li>
                 </ul>
             </div>
-            
-            <!-- Contact Info -->
             <div class="footer-contact-info">
                 <h3>Contact Us</h3>
                 <div class="footer-contact-item">
@@ -183,34 +210,65 @@
                 </div>
             </div>
         </div>
-        
         <div class="footer-bottom">
-            <p>Your Company - 2024 All rights reserved.</p>
+            <p>Your Company - 2025 All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Scripts -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('contactForm');
+            const loader = document.getElementById('loader');
+            const modal = document.getElementById('thankYouModal');
+            const closeModal = document.querySelector('.close-modal');
+
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbwwILsybRKyxKySI1UDdsHpN3gk8TvSDK30WeoSnm0J2_vXq9OQYTQ5X8x3hm1Jg-Z5/exec';
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                loader.style.display = 'block';
+
+                fetch(scriptURL, {
+                    method: 'POST',
+                    body: new FormData(form)
+                })
+                .then(response => {
+                    loader.style.display = 'none';
+                    modal.style.display = 'flex';
+                    form.reset();
+                })
+                .catch(error => {
+                    loader.style.display = 'none';
+                    alert('There was an error submitting the form. Please try again.');
+                    console.error('Error!', error.message);
+                });
+            });
+
+            closeModal.addEventListener('click', function () {
+                modal.style.display = 'none';
+            });
+
+            window.addEventListener('click', function (e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+
             const hamburger = document.querySelector(".hamburger");
             const navMenu = document.querySelector(".nav-menu");
             const navLinks = document.querySelectorAll(".nav-link");
 
-            // Hamburger toggle
             hamburger.addEventListener("click", function () {
                 hamburger.classList.toggle("active");
                 navMenu.classList.toggle("active");
             });
 
-            // Close menu and set active link
             navLinks.forEach(link => {
                 link.addEventListener("click", function () {
-                    // Close mobile menu
                     hamburger.classList.remove("active");
                     navMenu.classList.remove("active");
-
-                    // Remove active class from all links
                     navLinks.forEach(item => item.classList.remove("active"));
-
-                    // Add active class to clicked link
                     this.classList.add("active");
                 });
             });

@@ -175,6 +175,13 @@
     .about-hero-content-section {
         max-width: 100%;
     }
+    .about-hero-description {
+        color: #03346E;
+        opacity: 0.6;
+        font-size: 1rem;
+        line-height: 1.6;
+        text-align: justify;
+    }
 }
 
 /* About NGO Card */
