@@ -137,7 +137,7 @@ a {
     }
 
     .hamburger {
-        /* to the top of everything */ 
+        /* to the top of everything */
         display: block;
     }
 
@@ -328,21 +328,25 @@ a {
 
 /* Media Queries */
 @media (max-width: 1025px) {
-    .nav-item{
+    .nav-item {
         margin: 1rem;
         font-size: 0px;
     }
+
     .container {
         align-items: center;
         z-index: 1;
     }
-    .hero{
+
+    .hero {
         max-width: 80vw;
     }
+
     .home-hero-subtitle {
         /* margin-top: 75px; */
         max-width: 50%;
     }
+
     .title {
         font-size: 2rem;
         max-width: 60%;
@@ -381,13 +385,16 @@ a {
         font-size: 1rem;
         max-width: 100%;
     }
+
     .home-hero-subtitle {
         margin-top: 75px;
         max-width: 100%;
     }
-    .description{
+
+    .description {
         max-width: 100%;
     }
+
     .floating-elements {
         position: static;
         transform: none;
@@ -482,7 +489,7 @@ a {
     font-size: 1.5rem;
     line-height: 1.2;
     /* margin-bottom: 24px; */
-    align-self: center; 
+    align-self: center;
     /* max-width: 100%; */
 }
 
@@ -496,13 +503,21 @@ a {
 /* Actual logos container */
 .logo-scroller {
     display: flex;
-    gap: 40px;
+    gap: 80px;
     animation: scroll-logos 20s linear infinite;
 }
 
 .partner-logo {
-    max-width: 120px;
+    max-width: 100px;
     height: auto;
+    opacity: 0.8;
+    filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.1));
+    transition: opacity 0.3s ease;
+}
+
+.partner-logo-rock {
+    max-width: 150px;
+    height: 100px;
     opacity: 0.8;
     filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.1));
     transition: opacity 0.3s ease;
@@ -684,12 +699,14 @@ a {
         text-align: center;
         justify-items: center;
     }
+
     .service-card {
         width: 90%;
     }
 
     .image-column {
-        order: -1; /* Show image above services */
+        order: -1;
+        /* Show image above services */
         width: 100%;
     }
 
@@ -701,6 +718,7 @@ a {
     .service-column {
         align-items: center;
     }
+
     .servicecontainer {
         padding: 40px 20px;
         max-width: 100%;
@@ -801,12 +819,14 @@ a {
         transform: translateX(-50%);
     }
 }
+
 .cards-carousel-wrapper {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 /* .cards-scroll-container {
     overflow-x: auto;
     scroll-behavior: smooth;
@@ -815,17 +835,19 @@ a {
 } */
 
 .cards-scroll-container::-webkit-scrollbar {
-    display: none; /* Hide scrollbar */
+    display: none;
+    /* Hide scrollbar */
 }
 
 #cardCarousel {
     /* display: inline-flex; */
-    gap: 20px; 
+    gap: 20px;
     display: flex;
     transition: transform 0.5s ease;
     will-change: transform;
     /* Adjust as needed */
 }
+
 .carousel-button {
     position: absolute;
     top: 50%;
@@ -852,6 +874,7 @@ a {
 .carousel-button.right {
     right: 10px;
 }
+
 .card {
     flex: 0 0 auto;
     width: 350px;
@@ -904,7 +927,8 @@ a {
 .card-front::before,
 .card-back::before {
     content: "";
-    background: url("../image/choosebg.png") center/cover no-repeat;
+    background: rgba(26, 101, 235, 0.5);
+    /* background: url("../image/choosebg.png") center/cover no-repeat; */
     opacity: 0.5;
     position: absolute;
     top: 0;
@@ -918,7 +942,7 @@ a {
 .card:hover .card-front::before,
 .card:hover .card-back::before {
     background: linear-gradient(rgba(26, 101, 235, 0.5), rgba(26, 101, 235, 0.5)),
-        url("../image/choosebg.png") center/cover no-repeat;
+    ;
     opacity: 1;
     /* Make it fully visible */
 }
@@ -987,24 +1011,25 @@ a {
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
+
 @media (max-width:480px) {
     .card-icon {
         width: 60px;
         height: 60px;
         margin-bottom: 20px;
     }
-    
+
     .card h3 {
         font-size: 14px;
         margin-bottom: 15px;
     }
-    
+
     .card-back p {
         font-size: 12px;
         margin-bottom: 20px;
         color: #021526;
     }
-    
+
     .choose-learn-more {
         padding: 5px 10px;
         border: 1px solid #021526;
@@ -1014,12 +1039,13 @@ a {
         transition: all 0.3s;
         font-size: 10px;
     }
-    
+
     .choose-learn-more:hover {
         background: #e2e2b6;
         color: #021526;
         border: 2px solid #e2e2b6;
     }
+
     .carousel-button {
         position: absolute;
         top: 50%;
@@ -1034,19 +1060,20 @@ a {
         border-radius: 50%;
         transition: background-color 0.3s ease;
     }
-    
+
     .carousel-button:hover {
         background-color: rgba(0, 0, 0, 0.6);
     }
-    
+
     .carousel-button.left {
         left: 0px;
     }
-    
+
     .carousel-button.right {
         right: 0px;
     }
 }
+
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .carousel-button {
@@ -1063,18 +1090,19 @@ a {
         border-radius: 50%;
         transition: background-color 0.3s ease;
     }
-    
+
     .carousel-button:hover {
         background-color: rgba(0, 0, 0, 0.6);
     }
-    
+
     .carousel-button.left {
         left: 5px;
     }
-    
+
     .carousel-button.right {
         right: 10px;
     }
+
     .whychooseuscontainer {
         padding: 40px 20px;
     }
@@ -1475,7 +1503,6 @@ a {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    /* vertical centering */
     text-align: left;
 }
 
@@ -1534,15 +1561,29 @@ a {
 @media (max-width: 1024px) {
     .banner-section {
         padding: 40px 40px;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .banner-content {
+        max-width: 100%;
+        align-items: center;
     }
 
     .banner-main-heading {
         font-size: 30px;
     }
 
+    .banner-cta-wrapper {
+        justify-content: center;
+        margin-top: 24px;
+        width: 100%;
+    }
+
     .banner-cta-button {
-        right: 32px;
-        bottom: 32px;
+        right: auto;
+        bottom: auto;
     }
 }
 
@@ -1554,6 +1595,10 @@ a {
         align-items: center;
     }
 
+    .banner-content {
+        align-items: center;
+    }
+
     .banner-main-heading {
         font-size: 28px;
     }
@@ -1562,9 +1607,14 @@ a {
         font-size: 15px;
     }
 
+    .banner-cta-wrapper {
+        justify-content: center;
+        margin-top: 24px;
+        width: 100%;
+    }
+
     .banner-cta-button {
         position: static;
-        margin-top: 24px;
     }
 }
 
@@ -1752,7 +1802,8 @@ a {
     .footer-contact-info {
         text-align: center;
     }
-    .div-footer{
+
+    .div-footer {
         text-align: center;
     }
 }
