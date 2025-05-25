@@ -8,42 +8,24 @@
     <link rel="stylesheet" href="../assets/css/contactus.css"/>
 
     <style>
-        /* Thank You Modal Styles */
-        .thank-you-modal {
+        /* Toast Message Styles */
+        #toast-message {
             display: none;
             position: fixed;
-            z-index: 999;
-            left: 0; top: 0;
-            width: 100%; height: 100%;
-            max-width: 100vw;
-            background-color: rgba(26, 56, 117, 0.8);
-            /* opacity: 0.6; */
-            justify-content: center;
-            align-items: center;
-        }
-
-        .thank-you-modal-content {
-            background-color: #fff;
-            padding: 30px 40px;
-            border-radius: 12px;
-            width: 60%;
-            max-width: 100%;
-            text-align: center;
-            box-shadow: 0 8px 16px rgba(26, 56, 117, 0.8);
+            bottom: 30px;
+            right: 30px;
+            background-color: #1a3875;
+            color: #fff;
+            padding: 16px 24px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            z-index: 9999;
+            font-size: 16px;
             animation: fadeIn 0.3s ease-in-out;
-            position: relative;
-        }
-
-        .close-modal {
-            position: absolute;
-            top: 10px; right: 15px;
-            font-size: 24px;
-            cursor: pointer;
-            color: #333;
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-20px); }
+            from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
     </style>
@@ -53,7 +35,7 @@
     <header class="header">
         <nav class="navbar">
             <a href="#" class="nav-logo">
-                <img src="../assets/image/footerlogo.png" alt="Logo" />
+                <img src="https://ik.imagekit.io/edfoalImage/assets/image/footerlogo.png" alt="Logo" />
             </a>
             <ul class="nav-menu">
                 <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
@@ -124,6 +106,7 @@
                             <input type="checkbox" id="protectData" name="protectData">
                             <label for="protectData">I want to protect my data</label>
                         </div>
+
                         <button type="submit" class="contact-us-submit-btn">Contact Us</button>
                     </form>
                 </div>
@@ -131,39 +114,19 @@
                 <div class="contact-us-form-check">
                     <p class="contact-us-field-note">Field marked with * are required to complete demo</p>
                 </div>
-                <div style="max-width: 100%; width: 100%;">
-                    <div class="contact-us-contact-icons">
-                        <div class="contact-us-contact-item">
-                            <img src="../assets/image/alternate_email.png" alt="Email" class="contact-us-contact-icon-img">
-                            <p>demo@satxart.com you@website.com</p>
-                        </div>
-                    </div>
-                </div>
-                
             </div>
-
-            <!-- <div class="contact-us-contact-right">
-                <img src="../assets/image/map.png" alt="Map" class="contact-us-contact-map">
-            </div> -->
         </div>
     </section>
-
-    <!-- Thank You Modal -->
-    <div id="thankYouModal" class="thank-you-modal">
-        <div class="thank-you-modal-content">
-            <span class="close-modal">&times;</span>
-            <h2>Thank You!</h2>
-            <p>Your message has been submitted successfully. We'll get back to you soon.</p>
-            <a href="../index.html"><button type="submit" class="contact-us-submit-btn">Take Me To Home</button>
-        </div>
-    </div>
+    
+    <!-- Toast Message -->
+    <div id="toast-message"></div>
     
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
             <!-- Company Info -->
-            <div class="done">
-                <img src="../assets/image/footerlogo.png" alt="EdFoal" class="footer-logo">
+            <div>
+                <img src="https://ik.imagekit.io/edfoalImage/assets/image/footerlogo.png" alt="EdFoal" class="footer-logo">
                 <p class="footer-company-desc">
                     At EdFoal AI, we create tailored AI solutions to reduce costs, save time, and enhance business
                     efficiency for growth.
@@ -171,7 +134,7 @@
                 <div class="footer-social-links">
                     <!-- <a href="#" class="footer-social-link">Fb.</a> -->
                     <!-- <a href="#" class="footer-social-link">Tw.</a> -->
-                    <a href="https://in.linkedin.com/company/edfoal" class="footer-social-link">LinkedIn</a>
+                    <a href="https://in.linkedin.com/company/edfoal" class="footer-social-link">Li.</a>
                     <!-- <a href="#" class="footer-social-link">In.</a> -->
                 </div>
             </div>
@@ -205,16 +168,16 @@
                     <i class="mail-icon"></i>
                     <div>
                         <p>Send Mail</p>
-                        <a href="mailto:info@edfoal.com">info@edfoal.com</a>
+                        <a href="mailto:Info@satext.com">Info@satext.com</a>
                     </div>
                 </div>
-                <div class="footer-contact-item">
+                <!-- <div class="footer-contact-item">
                     <i class="clock-icon"></i>
                     <div>
                         <p>Opening Hours</p>
                         <span>Mon - Fri, 9:00 - 20:00</span>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
 
@@ -226,40 +189,34 @@
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const form = document.getElementById('contactForm');
-            const loader = document.getElementById('loader');
-            const modal = document.getElementById('thankYouModal');
-            const closeModal = document.querySelector('.close-modal');
-
             const scriptURL = 'https://script.google.com/macros/s/AKfycbwwILsybRKyxKySI1UDdsHpN3gk8TvSDK30WeoSnm0J2_vXq9OQYTQ5X8x3hm1Jg-Z5/exec';
+
+            function showToast(message) {
+                const toast = document.getElementById('toast-message');
+                toast.textContent = message;
+                toast.style.display = 'block';
+
+                setTimeout(() => {
+                    toast.style.display = 'none';
+                }, 10000); // Toast will disappear after 4 seconds
+            }
 
             form.addEventListener('submit', function (e) {
                 e.preventDefault();
-                loader.style.display = 'block';
+                showToast('Submitting your form...');
 
                 fetch(scriptURL, {
                     method: 'POST',
                     body: new FormData(form)
                 })
                 .then(response => {
-                    loader.style.display = 'none';
-                    modal.style.display = 'flex';
+                    showToast('Thank you! Your inquiry was submitted successfully. We will contact you soon.');
                     form.reset();
                 })
                 .catch(error => {
-                    loader.style.display = 'none';
-                    alert('There was an error submitting the form. Please try again.');
+                    showToast('There was an error submitting the form. Please try again.');
                     console.error('Error!', error.message);
                 });
-            });
-
-            closeModal.addEventListener('click', function () {
-                modal.style.display = 'none';
-            });
-
-            window.addEventListener('click', function (e) {
-                if (e.target === modal) {
-                    modal.style.display = 'none';
-                }
             });
 
             const hamburger = document.querySelector(".hamburger");

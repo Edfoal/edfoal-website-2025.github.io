@@ -4,162 +4,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>AI Consultancy</title>
+    <link rel="stylesheet" href="../assets/css/home.css">
+    <link rel="stylesheet" href="../assets/css/servicedetail.css">
     <style>
-        /* css to reset all the designs */
-
-        /* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap'); */
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            font-size: 62.5%;
-            font-family: 'Roboto', sans-serif;
-        }
-
-        li {
-            list-style: none;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        /* css to reset all the designs */
-
-        /* add styles on elements */
-
-        .header {
-            /* border-bottom: 1px solid #E2E8F0; */
-            background-color: #143A76;
-        }
-
-        .navbar {
-            position: relative;
-            /* Needed for absolute centering of nav-menu */
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.5rem 1.5rem;
-        }
-
-        @media only screen and (min-width: 769px) {
-            .nav-menu {
-                position: absolute;
-                left: 50%;
-                transform: translateX(-50%);
-            }
-        }
-
-        .nav-logo img {
-            height: 21px;
-            /* Adjust as needed */
-            width: auto;
-        }
-
-        .hamburger {
+        /* Thank You Modal Styles */
+        .thank-you-modal {
             display: none;
-        }
-
-        .bar {
-            display: block;
-            width: 25px;
-            height: 3px;
-            margin: 5px auto;
-            -webkit-transition: all 0.3s ease-in-out;
-            transition: all 0.3s ease-in-out;
-            /* background-color: #101010; */
-            background-color: #fff;
-        }
-
-        .nav-menu {
-            display: flex;
-            justify-content: space-between;
+            position: fixed;
+            z-index: 999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            max-width: 100vw;
+            background-color: rgba(26, 56, 117, 0.8);
+            /* opacity: 0.6; */
+            justify-content: center;
             align-items: center;
         }
 
-        .nav-item {
-            margin-left: 5rem;
+        .thank-you-modal-content {
+            background-color: #fff;
+            padding: 30px 40px;
+            border-radius: 12px;
+            width: 60%;
+            max-width: 100%;
+            text-align: center;
+            box-shadow: 0 8px 16px rgba(26, 56, 117, 0.8);
+            animation: fadeIn 0.3s ease-in-out;
+            position: relative;
         }
 
-        .nav-link {
-            /* font-size: 1.6rem; */
-            font-size: 2rem;
-            /* color: #475569; */
-            color: #E2E2B6;
-            opacity: 0.5;
-            /* change */
+        .close-modal {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            color: #333;
         }
 
-        .nav-link:hover {
-            color: #E2E2B6;
-            opacity: 1;
-        }
-        .nav-menu.active {
-                left: 0;
-                color: red;
-            }
-        .nav-logo {
-            /* font-size: 2.1rem; */
-            font-size: 3rem;
-            font-weight: 500;
-            /* color: #482ff7; */
-            color: #fff;
-        }
-
-        @media only screen and (max-width: 768px) {
-            .nav-menu {
-                position: fixed;
-                left: -100%;
-                top: 5rem;
-                flex-direction: column;
-                /* background-color: #fff; */
-                background-color: #222;
-                width: 100%;
-                border-radius: 10px;
-                text-align: center;
-                transition: 0.3s;
-                box-shadow:
-                    0 10px 27px rgba(0, 0, 0, 0.05);
-            }
-
-            .nav-link {
-                color: #fff;
-            }
-
-            .nav-menu.active {
-                left: 0;
-                color: #222;
-            }
-
-            .nav-item {
-                margin: 2.5rem 0;
-            }
-
-            .hamburger {
-                display: block;
-                cursor: pointer;
-            }
-
-            .hamburger.active .bar:nth-child(2) {
+        @keyframes fadeIn {
+            from {
                 opacity: 0;
+                transform: translateY(-20px);
             }
 
-            .hamburger.active .bar:nth-child(1) {
-                transform: translateY(8px) rotate(45deg);
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
-
-            .hamburger.active .bar:nth-child(3) {
-                transform: translateY(-8px) rotate(-45deg);
-            }
-
         }
 
-        /* add styles on elements */
+        #loader {
+            display: none;
+            text-align: center;
+            margin: 20px 0;
+            color: #28a745;
+            /* Green color */
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .done {
+            align-items: start;
+        }
     </style>
 </head>
 
@@ -167,21 +77,24 @@
     <header class="header">
         <nav class="navbar">
             <a href="#" class="nav-logo">
-                <img src="assets/image/footerlogo.png" alt="Logo" />
+                <img src="https://ik.imagekit.io/edfoalImage/assets/image/footerlogo.png" alt="Logo" />
             </a>
 
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="./index.html" class="nav-link active">Home</a>
+                    <a href="../index.html" class="nav-link ">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">About</a>
+                    <a href="../pages/servicelist.html" class="nav-link active">Services</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Projects</a>
+                    <a href="../pages/aboutus.html" class="nav-link">About Us</a>
                 </li>
+                <!-- <li class="nav-item">
+                    <a href="../pages/usecasedomain.html" class="nav-link">Usecases</a>
+                </li> -->
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Contact</a>
+                    <a href="../pages/contactus.html" class="nav-link">Contact Us</a>
                 </li>
             </ul>
             <div class="hamburger">
@@ -191,40 +104,333 @@
             </div>
         </nav>
     </header>
-    <body>
-        <h1>
-            This is
-        </h1>
-    </body>
+    <section class="service-detail-banner-body">
+        <div class="service-detail-banner-grid-overlay"></div>
+        <div class="service-detail-banner-content">
+            <div class="service-detail-banner-about-label">Our Services</div>
+            <h1 class="service-detail-banner-main-heading">AI Consultancy</h1>
+            <!-- <p class="about-banner-subtitle">- -->
+        </div>
+    </section>
+    <section class="service-detail">
+        <div class="service-detail-text">
+            <p class="service-detail-subheading">AI Consultancy</p>
+            <h3 class="service-detail-heading">Strategy-First AI Guidance That Delivers Real Impact</h3>
+            <p class="service-detail-content">Jumping into AI without a strategy leads to wasted time and missed
+                opportunities. Our consultancy ensures that doesn’t happen. We work with you to explore how AI can truly
+                elevate your business — not just as a tech trend, but as a core enabler of growth, efficiency, and
+                innovation.</p>
+            <p class="service-detail-content">Whether you're just starting out or scaling existing AI initiatives, we
+                offer expert guidance at every stage — from opportunity discovery and technical roadmapping to vendor
+                evaluation and ethical AI alignment. We don’t just advise — we empower your team with the tools,
+                mindset, and roadmap to confidently leverage AI long-term.</p>
+
+            <div class="service-detail-list">
+                <div class="column">
+                    <ul>
+                        <li>✔ Strategic AI Consulting</li>
+                        <li>✔ Opportunity Discovery</li>
+                        <li>✔ Technical Roadmapping</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <ul>
+                        <li>✔ Ethical AI Alignment</li>
+                        <li>✔ Scalable AI Adoption</li>
+                        <li>✔ Empowered Teams</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-detail-image">
+            <img src="https://ik.imagekit.io/edfoalImage/assets/image/service3.jpg" alt="AI Automation">
+        </div>
+    </section>
+
+    <!-- <section class="service-detail-reviews">
+        <p class="service-detail-reviews-subheading">Reviews</p>
+        <h2 class="service-detail-reviews-heading">Feature Reviews</h2>
+        <p class="service-detail-reviews-tagline">Discover the Highlights of Our Solutions!</p>
+
+        <div class="service-detail-carousel">
+            <button class="prev">&#10094;</button>
+            <div class="service-detail-carousel-inner">
+                <div class="service-detail-review">
+                    <div class="service-detail-stars">★★★★☆</div>
+                    <p class="service-detail-review-content">Nemo asper natur sedra magni ratione serui nesciunt est dolorem ipsum
+                        dolor sit amet consec tetur adipisci velit numsuam modi tempora incidunt magnam.Nemo asper natur
+                        sedra magni ratione serui nesciunt est dolorem ipsum dolor sit amet consec tetur adipisci velit
+                    </p>
+                    <div class="service-detail-author-info">
+                        <img class="service-detail-profile-pic" src="../https://ik.imagekit.io/edfoalImage/assets/image/client.png" alt="Profile Picture">
+                        <div class="author">
+                            Firstname Lastname<br>
+                            <small>Location/Designation</small>
+                            <small>Role</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="service-detail-review">
+                <div class="service-detail-stars">★★★★☆</div>
+                <p class="service-detail-review-content">
+                    Nemo asper natur sedra magni ratione serui nesciunt est dolorem ipsum
+                    dolor sit amet consec tetur adipisci velit numsuam modi tempora incidunt magnam.Nemo asper natur
+                    sedra magni ratione serui nesciunt est dolorem ipsum dolor sit amet consec tetur adipisci velit
+                </p>
+                <div class="service-detail-author-info">
+                    <img class="service-detail-profile-pic" src="../https://ik.imagekit.io/edfoalImage/assets/image/client.png" alt="Profile Picture">
+                    <div class="service-detail-author">
+                        Firstname Lastname<br>
+                        <small>Location/Designation</small>
+                        <small>Role</small>
+                    </div>
+                </div>
+            </div>
+            <div class="service-detail-review">
+                <div class="service-detail-stars">★★★★☆</div>
+                <p class="service-detail-review-content">Nemo asper natur sedra magni ratione serui nesciunt est dolorem ipsum
+                    dolor sit amet consec tetur adipisci velit numsuam modi tempora incidunt magnam.Nemo asper natur
+                    sedra magni ratione serui nesciunt est dolorem ipsum dolor sit amet consec tetur adipisci velit
+                </p>
+                <div class="service-detail-author-info">
+                    <img class="service-detail-profile-pic" src="../https://ik.imagekit.io/edfoalImage/assets/image/client.png" alt="Profile Picture">
+                    <div class="service-detail-author">
+                        Firstname Lastname<br>
+                        <small>Location/Designation</small>
+                        <small>Role</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <button class="next">&#10095;</button>
+        </div>
+    </section> -->
+
+    <section class="service-detail-demo">
+        <div class="service-detail-demo-text">
+            <h2 class="service-detail-demo-text-heading">Let’s Schedule your demo</h2>
+            <p class="service-detail-demo-text-content">Provide your details to arrange a personalized demonstration.
+            </p>
+        </div>
+        <div class="service-detail-demo-form">
+            <form id="service-detail-demoForm" name="submit-to-google-sheet">
+                <div class="service-detail-form-group">
+                    <label class="service-detail-demo-form-label" for="fullName">Full Name</label>
+                    <input id="fullName" name="fullName" type="text" placeholder="Enter your full name" required>
+                </div>
+                <div class="service-detail-form-group">
+                    <label class="service-detail-demo-form-label" for="email">Work Email</label>
+                    <input id="email" name="email" type="email" placeholder="Enter your work email" required>
+                </div>
+                <div class="service-detail-form-group">
+                    <label class="service-detail-demo-form-label" for="phone">Phone</label>
+                    <input id="phone" name="phone" type="tel" placeholder="Enter your phone number" required>
+                </div>
+
+                <div class="service-detail-text-in-form">
+                    <p>For a more tailored demo, please tell us about your company (optional)</p>
+                </div>
+                <div class="service-detail-form-group">
+                    <label class="service-detail-demo-form-label" for="company">Company</label>
+                    <input id="company" name="company" type="text" placeholder="Enter your company">
+                </div>
+                <div class="service-detail-form-group">
+                    <label class="service-detail-demo-form-label" for="geoFocus">Role/Position</label>
+                    <input id="geoFocus" name="geoFocus" type="text" placeholder="Enter your role/position">
+                </div>
+                <div class="service-detail-form-group">
+                    <label class="service-detail-demo-form-label" for="potentialUsecase">Potential Usecase</label>
+                    <input id="potentialUsecase" name="potentialUsecase" type="text" placeholder="Describe">
+                </div>
+                <div class="service-detail-text-in-form-right">
+                    <p>Want to add more detail <u><strong>Click Here !</strong></u></p>
+                </div>
+                <div class="service-detail-button-centered">
+                    <p class="service-detail-button-centered-content">Feel free contact us at
+                        <strong>info@edfoal.com</strong>
+                    </p>
+                    <button class="service-detail-button" type="submit">Contact Us</button>
+                    <p class="service-detail-button-centered-content">Field marked with * are required to complete demo
+                    </p>
+                </div>
+            </form>
+        </div>
+        <div id="toast-message" style="
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #1a3875;
+    color: #fff;
+    padding: 16px 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    z-index: 9999;
+    font-size: 16px;
+">
+            Thank you! Your message was submitted successfully.
+        </div>
+        <div id="loader" style="
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #1a3875;
+    font-weight: bold;">
+    Submitting...
+</div>
+
+    </section>
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Company Info -->
+            <div>
+                <img src="https://ik.imagekit.io/edfoalImage/assets/image/footerlogo.png" alt="EdFoal"
+                    class="footer-logo">
+                <p class="footer-company-desc">
+                    At EdFoal AI, we create tailored AI solutions to reduce costs, save time, and enhance business
+                    efficiency for growth.
+                </p>
+                <div class="footer-social-links">
+                    <!-- <a href="#" class="footer-social-link">Fb.</a> -->
+                    <!-- <a href="#" class="footer-social-link">Tw.</a> -->
+                    <a href="https://in.linkedin.com/company/edfoal" class="footer-social-link">LinkedIn</a>
+                    <!-- <a href="#" class="footer-social-link">In.</a> -->
+                </div>
+            </div>
+
+            <!-- Our Pages -->
+            <div class="footer-menu">
+                <h3>Our Pages</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="./aboutus.html">About Us</a></li>
+                    <li><a href="./servicelist.html">Our Services</a></li>
+                    <!-- <li><a href="#">Use Cases</a></li> -->
+                    <li><a href="./contactus.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Services -->
+            <div class="footer-menu">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="../pages/automation.html">Automation</a></li>
+                    <li><a href="../pages/tailored-ai-solutions.html">Tailored AI Solutions</a></li>
+                    <li><a href="./ai-consultancy.html">AI Consultancy</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="footer-contact-info">
+                <h3>Contact Us</h3>
+                <div class="footer-contact-item">
+                    <i class="mail-icon"></i>
+                    <div>
+                        <p>Send Mail</p>
+                        <a href="mailto:info@edfoal.com">info@edfoal.com</a>
+                    </div>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="clock-icon"></i>
+                    <div>
+                        <p>Opening Hours</p>
+                        <span>Mon - Fri, 9:00 - 20:00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>Your Company - 2025 All rights reserved.</p>
+        </div>
+    </footer>
     <script>
-        const hamburger = document.querySelector(".hamburger");
-        const navMenu = document.querySelector(".nav-menu");
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburger = document.querySelector(".hamburger");
+            const navMenu = document.querySelector(".nav-menu");
+            const navLinks = document.querySelectorAll(".nav-link");
 
-        hamburger.addEventListener("click", mobileMenu);
+            // Hamburger toggle
+            hamburger.addEventListener("click", function () {
+                hamburger.classList.toggle("active");
+                navMenu.classList.toggle("active");
+            });
 
-        function mobileMenu() {
-            hamburger.classList.toggle("active");
-            navMenu.classList.toggle("active");
+            // Close menu and set active link
+            navLinks.forEach(link => {
+                link.addEventListener("click", function () {
+                    // Close mobile menu
+                    hamburger.classList.remove("active");
+                    navMenu.classList.remove("active");
+
+                    // Remove active class from all links
+                    navLinks.forEach(item => item.classList.remove("active"));
+
+                    // Add active class to clicked link
+                    this.classList.add("active");
+                });
+            });
+        });
+    </script>
+    <script>
+        function showToast(message) {
+            const toast = document.getElementById('toast-message');
+            toast.textContent = message;
+            toast.style.display = 'block';
+
+            setTimeout(() => {
+                toast.style.display = 'none';
+            }, 4000); // Toast will disappear after 4 seconds
         }
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('service-detail-demoForm');
+            const loader = document.getElementById('loader');
+            const modal = document.getElementById('thankYouModal');
+            const closeModal = document.querySelector('.close-modal');
 
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbwwILsybRKyxKySI1UDdsHpN3gk8TvSDK30WeoSnm0J2_vXq9OQYTQ5X8x3hm1Jg-Z5/exec';
 
-        // when we click on hamburger icon its close 
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
 
-        const navLink = document.querySelectorAll(".nav-link");
+                // Show toast for submission started
+                showToast('Submitting your form...');
+                loader.style.display = 'block';
 
-        navLink.forEach(n => n.addEventListener("click", closeMenu));
+                fetch(scriptURL, {
+                    method: 'POST',
+                    body: new FormData(form)
+                })
+                    .then(response => {
+                        loader.style.display = 'none';
+                        showToast('Thank you! Your message was submitted successfully.');
+                        form.reset();
+                        console.log('Success!', response);
+                    })
+                    .catch(error => {
+                        loader.style.display = 'none';
+                        showToast('There was an error submitting the form. Please try again.');
+                        console.error('Error!', error.message);
+                    });
+            });
 
-        function closeMenu() {
-            hamburger.classList.remove("active");
-            navMenu.classList.remove("active");
-        }
+            closeModal?.addEventListener('click', function () {
+                modal.style.display = 'none';
+            });
 
-        navLink.forEach(link => {
-    link.addEventListener("click", function () {
-        navLink.forEach(item => item.classList.remove("active")); // remove from all
-        this.classList.add("active"); // add to clicked one
-    });
-});
+            window.addEventListener('click', function (e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+
     </script>
 </body>
 

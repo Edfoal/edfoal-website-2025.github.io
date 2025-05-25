@@ -1135,7 +1135,7 @@ a {
     background:
         linear-gradient(to left, #1e50d4 60%, rgba(255, 255, 255, 0) 40%),
         /* Solid blue on left, transparent on right */
-        url('assets/image/testbg.png');
+        url('https://ik.imagekit.io/edfoalImage/assets/image/testbg.png');
     /* Background image on the right */
     background-size: 100% 100%, cover;
     background-position: left, right;

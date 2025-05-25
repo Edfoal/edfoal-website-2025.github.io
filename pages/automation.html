@@ -11,7 +11,7 @@
     <header class="header">
         <nav class="navbar">
             <a href="#" class="nav-logo">
-                <img src="../assets/image/footerlogo.png" alt="Logo" />
+                <img src="https://ik.imagekit.io/edfoalImage/assets/image/footerlogo.png" alt="Logo" />
             </a>
 
             <ul class="nav-menu">
@@ -91,7 +91,7 @@
                         sedra magni ratione serui nesciunt est dolorem ipsum dolor sit amet consec tetur adipisci velit
                     </p>
                     <div class="service-detail-author-info">
-                        <img class="service-detail-profile-pic" src="../assets/image/client.png" alt="Profile Picture">
+                        <img class="service-detail-profile-pic" src="../https://ik.imagekit.io/edfoalImage/assets/image/client.png" alt="Profile Picture">
                         <div class="author">
                             Firstname Lastname<br>
                             <small>Location/Designation</small>
@@ -108,7 +108,7 @@
                     sedra magni ratione serui nesciunt est dolorem ipsum dolor sit amet consec tetur adipisci velit
                 </p>
                 <div class="service-detail-author-info">
-                    <img class="service-detail-profile-pic" src="../assets/image/client.png" alt="Profile Picture">
+                    <img class="service-detail-profile-pic" src="../https://ik.imagekit.io/edfoalImage/assets/image/client.png" alt="Profile Picture">
                     <div class="service-detail-author">
                         Firstname Lastname<br>
                         <small>Location/Designation</small>
@@ -123,7 +123,7 @@
                     sedra magni ratione serui nesciunt est dolorem ipsum dolor sit amet consec tetur adipisci velit
                 </p>
                 <div class="service-detail-author-info">
-                    <img class="service-detail-profile-pic" src="../assets/image/client.png" alt="Profile Picture">
+                    <img class="service-detail-profile-pic" src="../https://ik.imagekit.io/edfoalImage/assets/image/client.png" alt="Profile Picture">
                     <div class="service-detail-author">
                         Firstname Lastname<br>
                         <small>Location/Designation</small>
@@ -143,52 +143,78 @@
             <p class="service-detail-demo-text-content">Provide your details to arrange a personalized demonstration.</p>
         </div>
         <div class="service-detail-demo-form">
-            <form id="service-detail-demoForm">
+            <form id="service-detail-demoForm" name="submit-to-google-sheet">
                 <div class="service-detail-form-group">
                     <label class="service-detail-demo-form-label" for="fullName">Full Name</label>
-                    <input id="fullName" type="text" placeholder="Enter your full name" required>
+                    <input id="fullName" name="fullName" type="text" placeholder="Enter your full name" required>
                 </div>
                 <div class="service-detail-form-group">
-                    <label class="service-detail-demo-form-label" for="workEmail">Work Email</label>
-                    <input id="workEmail" type="email" placeholder="Enter your work email" required>
+                    <label class="service-detail-demo-form-label" for="email">Work Email</label>
+                    <input id="email" name="email" type="email" placeholder="Enter your work email" required>
                 </div>
                 <div class="service-detail-form-group">
                     <label class="service-detail-demo-form-label" for="phone">Phone</label>
-                    <input id="phone" type="tel" placeholder="Enter your phone number" required>
+                    <input id="phone" name="phone" type="tel" placeholder="Enter your phone number" required>
                 </div>
+
                 <div class="service-detail-text-in-form">
                     <p>For a more tailored demo, please tell us about your company (optional)</p>
                 </div>
                 <div class="service-detail-form-group">
                     <label class="service-detail-demo-form-label" for="company">Company</label>
-                    <input id="company" type="text" placeholder="Enter your company">
+                    <input id="company" name="company" type="text" placeholder="Enter your company">
                 </div>
                 <div class="service-detail-form-group">
-                    <label class="service-detail-demo-form-label" for="role">Role/Position</label>
-                    <input id="role" type="text" placeholder="Enter your role/position">
+                    <label class="service-detail-demo-form-label" for="geoFocus">Role/Position</label>
+                    <input id="geoFocus" name="geoFocus" type="text" placeholder="Enter your role/position">
                 </div>
                 <div class="service-detail-form-group">
-                    <label class="service-detail-demo-form-label" for="role">Potentional Usecase</label>
-                    <input id="role" type="text" placeholder="Describe">
+                    <label class="service-detail-demo-form-label" for="potentialUsecase">Potential Usecase</label>
+                    <input id="potentialUsecase" name="potentialUsecase" type="text" placeholder="Describe">
                 </div>
-                <div class="service-detail-text-in-form-right">
+                <!-- <div class="service-detail-text-in-form-right">
                     <p>Want to add more detail <u><strong>Click Here !</strong></u></p>
-                </div>
+                </div> -->
                 <div class="service-detail-button-centered">
-                    <p class="service-detail-button-centered-content">Feel free contact us at <strong>info@edfoal.com</strong></p>
+                    <p class="service-detail-button-centered-content">Feel free contact us at
+                        <strong>info@edfoal.com</strong>
+                    </p>
                     <button class="service-detail-button" type="submit">Contact Us</button>
-                    <p class="service-detail-button-centered-content">Field marked with * are required to complete demo</p>
+                    <p class="service-detail-button-centered-content">Field marked with * are required to complete demo
+                    </p>
                 </div>
-               
             </form>
         </div>
-
+        <div id="toast-message" style="
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #1a3875;
+    color: #fff;
+    padding: 16px 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    z-index: 9999;
+    font-size: 16px;
+">
+           Thank you! Your inquiry was submitted successfully. We will contact you soon.
+        </div>
+        <!-- <div id="loader" style="
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #1a3875;
+    font-weight: bold;">
+    Submitting...
+</div> -->
     </section>
     <footer class="footer">
         <div class="footer-content">
             <!-- Company Info -->
             <div>
-                <img src="../assets/image/footerlogo.png" alt="EdFoal" class="footer-logo">
+                <img src="https://ik.imagekit.io/edfoalImage/assets/image/footerlogo.png" alt="EdFoal" class="footer-logo">
                 <p class="footer-company-desc">
                     At EdFoal AI, we create tailored AI solutions to reduce costs, save time, and enhance business
                     efficiency for growth.
@@ -205,11 +231,11 @@
             <div class="footer-menu">
                 <h3>Our Pages</h3>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Our Services</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="./aboutus.html">About Us</a></li>
+                    <li><a href="./servicelist.html">Our Services</a></li>
                     <!-- <li><a href="#">Use Cases</a></li> -->
-                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="./contactus.html">Contact Us</a></li>
                 </ul>
             </div>
 
@@ -272,6 +298,39 @@
                     // Add active class to clicked link
                     this.classList.add("active");
                 });
+            });
+        });
+    </script>
+    <script>
+        function showToast(message) {
+            const toast = document.getElementById('toast-message');
+            toast.textContent = message;
+            toast.style.display = 'block';
+
+            setTimeout(() => {
+                toast.style.display = 'none';
+            }, 4000); // Toast will disappear after 4 seconds
+        }
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('service-detail-demoForm');
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbwwILsybRKyxKySI1UDdsHpN3gk8TvSDK30WeoSnm0J2_vXq9OQYTQ5X8x3hm1Jg-Z5/exec';
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                // Show toast for submission started
+                showToast('Submitting your form...');
+                fetch(scriptURL, {
+                    method: 'POST',
+                    body: new FormData(form)
+                })
+                    .then(response => {
+                        showToast('Thank you! Your inquiry was submitted successfully. We will contact you soon.');
+                        form.reset();
+                    })
+                    .catch(error => {
+                        showToast('There was an error submitting the form. Please try again.');
+                    });
             });
         });
     </script>
