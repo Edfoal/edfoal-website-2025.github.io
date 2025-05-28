@@ -281,6 +281,7 @@
     font-size: 1rem;
     border: 0.0625rem solid #00B3FF;
     border-radius: 0.3125rem;
+    width: 90%;
 }
 
 .service-detail-form-group input::placeholder {
@@ -470,3 +471,55 @@
         margin-bottom: 0.625rem;
     }
 }
+@media (max-width: 48rem) {
+    .service-detail-demo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .service-detail-demo-text {
+      width: 100%;
+      margin: 0 auto;
+    }
+  
+    .service-detail-demo-text-heading,
+    .service-detail-demo-text-content {
+      text-align: center;
+    }
+  
+    .service-detail-demo-form {
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+  
+  @media (max-width: 30rem) {
+    .service-detail-demo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .service-detail-demo-text {
+      width: 100%;
+      margin: 0 auto;
+    }
+  
+    .service-detail-demo-text-heading,
+    .service-detail-demo-text-content {
+      text-align: center;
+    }
+  
+    .service-detail-demo-form {
+      width: 95%;
+      margin: 0 auto;
+    }
+    .service-detail-form-group {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+  }
